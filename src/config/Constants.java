@@ -47,7 +47,19 @@ import java.awt.Color;
  * @author julh
  */
 public class Constants {
-    
+    // <editor-fold defaultstate="collapsed" desc="Batch constants">
+    public static final int BATCH_RUNS = 1;
+
+    public static final int BATCH_AGENTS = 5;
+
+    public static final int BATCH_ENVS = 3;
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="Clustering constants">
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="Already present constants">
+
     // Max number of rows in environment
     public static final int MAX_ROWS = 600;
     
@@ -123,7 +135,7 @@ public class Constants {
     public static final int MAX_TIME = 10000;
     
     // Percent of a territory that must be explored
-    public static final double TERRITORY_PERCENT_EXPLORED_GOAL = 0.95;
+    public static final double TERRITORY_PERCENT_EXPLORED_GOAL = 0.98;
     
     // Probability of new debris at each time step
     public static final double NEW_DEBRIS_LIKELIHOOD = 0.5;
@@ -208,4 +220,6 @@ public class Constants {
 
     // Indent in console information
     public static final String INDENT = "    - ";
+
+    // </editor-fold>
 }
