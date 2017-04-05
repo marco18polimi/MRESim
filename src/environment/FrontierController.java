@@ -11,6 +11,7 @@ import java.util.PriorityQueue;
  * Created by marco on 05/04/2017.
  */
 public class FrontierController {
+
     //<editor-fold defaultstate="collapsed" desc="Calculate and set agent's frontiers">
     public static void calculateFrontiers(RealAgent agent) {
         // If recalculating frontiers, must set old frontiers dirty for image rendering
@@ -33,6 +34,8 @@ public class FrontierController {
             }
         }
         agent.setFrontiers(frontiers);
-
     }
+
+    // </editor-fold>
+
 }

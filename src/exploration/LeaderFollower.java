@@ -45,6 +45,7 @@ import agents.TeammateAgent;
 import config.Constants;
 import environment.ContourTracer;
 import environment.Frontier;
+import environment.FrontierController;
 import environment.OccupancyGrid;
 import java.awt.Point;
 import java.util.LinkedList;
@@ -613,7 +614,8 @@ public class LeaderFollower {
                 contourCounter++;
             }
         }
-        agent.setFrontiers(frontiers);
+        //agent.setFrontiers(frontiers);
+        FrontierController.calculateFrontiers(agent);
 
         System.out.print("retained " + contourCounter + " of them. ");
         System.out.println("Took " + (System.currentTimeMillis()-realtimeStart) + "ms.");
