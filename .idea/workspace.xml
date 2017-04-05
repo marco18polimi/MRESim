@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1af4ec83-2cb6-438c-a042-35fb095a1534" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/exploration/Reserve.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastEnvironment.png" afterPath="$PROJECT_DIR$/config/lastEnvironment.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/SimulatorConfig.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/SimulatorConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/environment/Skeleton.class" afterPath="$PROJECT_DIR$/out/production/MRESim/environment/Skeleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/FrontierExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/FrontierExploration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/RoleBasedExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/RoleBasedExploration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/UtilityExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/UtilityExploration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$1.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$10.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$11.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$12.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$13.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$14.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$15.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$16.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$17.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$18.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$19.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$2.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$20.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$3.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$4.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$5.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$6.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$7.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$8.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$9.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" afterPath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastteamconfig.txt" afterPath="$PROJECT_DIR$/config/lastteamconfig.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Constants.java" afterPath="$PROJECT_DIR$/src/config/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/SimulatorConfig.java" afterPath="$PROJECT_DIR$/src/config/SimulatorConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/environment/Skeleton.java" afterPath="$PROJECT_DIR$/src/environment/Skeleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" afterPath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/MainGUI.java" afterPath="$PROJECT_DIR$/src/gui/MainGUI.java" />
     </list>
     <ignored path="MRESim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,15 +26,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="398" column="12" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="12" />
+            <state relative-caret-position="318">
+              <caret line="407" column="0" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
               <folding>
                 <element signature="e#14818#14819#0" expanded="true" />
                 <element signature="e#14888#14889#0" expanded="true" />
                 <element signature="e#38549#38635#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrontierController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/environment/FrontierController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,6 +133,7 @@
         <option value="$PROJECT_DIR$/src/config/Constants.java" />
         <option value="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
         <option value="$PROJECT_DIR$/src/gui/MainGUI.java" />
+        <option value="$PROJECT_DIR$/src/environment/FrontierController.java" />
       </list>
     </option>
   </component>
@@ -265,6 +242,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="exploration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MRESim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MRESim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -760,12 +755,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491387010413</updated>
-      <workItem from="1491387016930" duration="4769000" />
+      <workItem from="1491387016930" duration="5691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4769000" />
+    <option name="totallyTimeSpent" value="5691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -943,12 +938,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="398" column="12" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="12" />
+        <state relative-caret-position="318">
+          <caret line="407" column="0" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
           <folding>
             <element signature="e#14818#14819#0" expanded="true" />
             <element signature="e#14888#14889#0" expanded="true" />
             <element signature="e#38549#38635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environment/FrontierController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
