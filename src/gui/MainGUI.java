@@ -80,9 +80,12 @@ public class MainGUI extends javax.swing.JFrame {
     private JFrame graphFrame;
     private JPanel graphPanel;
     public Map<Integer, Double> jointKnowledge = new HashMap();
+
+    //Added
+    private int envCount; //Environment counter for batch runs
     
     /** Creates new form MainGUI */
-    public MainGUI() {
+    public MainGUI(int envCount) {
         RUNMODE = runMode.stopped;
         initComponents();
         this.addWindowListener(windowListener);
@@ -93,7 +96,8 @@ public class MainGUI extends javax.swing.JFrame {
         setLocation(x, y);
 
         robotTeamConfig = new RobotTeamConfig();
-        simConfig = new SimulatorConfig();
+        simConfig = new SimulatorConfig(envCount);
+        this.envCount = envCount;
         updateFromRobotTeamConfig();
         updateFromEnvConfig();   
         //simulation = new SimulationFramework(this, robotTeamConfig, simConfig, explorationImage);
@@ -103,6 +107,8 @@ public class MainGUI extends javax.swing.JFrame {
         showConnex = true;
         
         initGraphFrame();
+
+        buttonStartActionPerformed(null);
     }
     
     private void initGraphFrame()
@@ -386,9 +392,15 @@ public class MainGUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        int envCount;
+        if(args.length == 0){
+            envCount = 1;
+        }else{
+            envCount = Integer.parseInt(args[0]);
+        }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainGUI().setVisible(true);
+                new MainGUI(envCount).setVisible(true);
             }
         });
     }   
@@ -806,7 +818,7 @@ public class MainGUI extends javax.swing.JFrame {
          switch(RUNMODE) {
             case stopped:   RUNMODE = runMode.running;
                             buttonStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/buttonPause.png")));
-                            simulation = new SimulationFramework(this, robotTeamConfig, simConfig, explorationImage);
+                            simulation = new SimulationFramework(this, robotTeamConfig, simConfig, explorationImage, envCount);
                             simulation.start();
                             break;
             case running:   RUNMODE = runMode.paused;
@@ -825,7 +837,7 @@ public class MainGUI extends javax.swing.JFrame {
          switch(RUNMODE) {
             case stopped:   RUNMODE = runMode.paused;
                             buttonStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/buttonPlay.png")));
-                            simulation = new SimulationFramework(this, robotTeamConfig, simConfig, explorationImage);
+                            simulation = new SimulationFramework(this, robotTeamConfig, simConfig, explorationImage, envCount);
                             simulation.start();
                             simulation.takeOneStep();
                             break;

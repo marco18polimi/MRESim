@@ -98,7 +98,7 @@ public class SimulatorConfig {
     private boolean tryToGetToExplorerRV;
     private boolean useSingleMeetingTime;
 
-    public SimulatorConfig() {
+    public SimulatorConfig(int envCount) {
         boolean oldEnvVariableConfigFound = loadOldSimulatorConfig();
         if(!oldEnvVariableConfigFound) {
             //set defaults
@@ -128,7 +128,7 @@ public class SimulatorConfig {
             useSingleMeetingTime = false;
         }
         
-        boolean oldWallConfigFound = loadOldWallConfig();
+        boolean oldWallConfigFound = loadOldWallConfig(envCount);
         if(!oldWallConfigFound)
             env = new Environment(Constants.MAX_ROWS, Constants.MAX_COLS);
     }
@@ -504,8 +504,8 @@ public class SimulatorConfig {
     }
 
     
-    private boolean loadOldWallConfig() {
-        String oldConfigFilename = System.getProperty("user.dir") + "/config/lastEnvironment.png";
+    private boolean loadOldWallConfig(int envCount) {
+        String oldConfigFilename = System.getProperty("user.dir") + "/environments/Tesi/env_"+envCount+".png";
         File file = new File(oldConfigFilename);
         if (file.exists())
             return loadWallConfig(oldConfigFilename);

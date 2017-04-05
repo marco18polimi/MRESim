@@ -57,10 +57,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Point;
 import java.awt.Polygon;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -119,15 +117,19 @@ public class SimulationFramework implements ActionListener {
     long time1 = 0, time2 = 0, time3 = 0, time4 = 0, time5 = 0;
 
     RobotTeamConfig robotTeamConfig;
+
+    //Added
+    private int environmentCounter; //Environment counter for batch runs
     
 
-    public SimulationFramework(MainGUI maingui, RobotTeamConfig newRobotTeamConfig, SimulatorConfig newSimConfig, ExplorationImage img) {
+    public SimulationFramework(MainGUI maingui, RobotTeamConfig newRobotTeamConfig, SimulatorConfig newSimConfig, ExplorationImage img, int envCount) {
         random = new Random();
         mainGUI = maingui;
         image = img;
         simConfig = newSimConfig;
         env = simConfig.getEnv();
         robotTeamConfig = newRobotTeamConfig;
+        environmentCounter = envCount;
         
         reset();
     }
@@ -460,12 +462,12 @@ public class SimulationFramework implements ActionListener {
     public void start() {
         runNumber = 0;
         //Check if we are running batch
-        if (simConfig.getExpAlgorithm() == exptype.BatchRun) {
+        if (simConfig.getExpAlgorithm() == exptype.BatchRun || simConfig.getExpAlgorithm() == exptype.LeaderFollower) {
             isBatch = true;
         } else isBatch = false;
         
         if (isBatch) {
-            updateRunConfig(); //this should set runNumMax;
+            //updateRunConfig(); //this should set runNumMax;
             reset();
         }
         //simConfig.TARGET_INFO_RATIO = 0.90;
@@ -477,7 +479,7 @@ public class SimulationFramework implements ActionListener {
 
     private void restart() {
         if (isBatch)
-            updateRunConfig();
+            //updateRunConfig();
         reset();
         System.out.println(this.toString() + "Restarting exploration!");
         simStartTime = System.currentTimeMillis();
@@ -496,16 +498,16 @@ public class SimulationFramework implements ActionListener {
     }
 
     private boolean allAgentsDone() {
-        /*for(RealAgent a: agent) {
+        for(RealAgent a: agent) {
             if(a.getID() == 1)
                 continue;
             if(!a.isMissionComplete())
                 return false;
-            if(!a.getTeammate(1).isInRange())
-                return false;
+            /*if(!a.getTeammate(1).isInRange())
+                return false;*/
         }
-        return true;*/
-        return (((double)agent[0].getStats().getAreaKnown()/(double)totalArea) >= Constants.TERRITORY_PERCENT_EXPLORED_GOAL);
+        return true;
+        //return (((double)agent[0].getStats().getAreaKnown()/(double)totalArea) >= Constants.TERRITORY_PERCENT_EXPLORED_GOAL);
     }
 
     private void checkRunFinish() {
@@ -515,12 +517,98 @@ public class SimulationFramework implements ActionListener {
             if (!agent[0].getLocation().equals(agent[i].getLocation()))
                 allAgentsAtBase = false;
         }
-        
-        if(timeElapsed >= 3000 || allAgentsDone() || allAgentsAtBase) {
+
+        if(timeElapsed >= 500 || allAgentsDone() || allAgentsAtBase ||
+                (((double)agent[0].getStats().getAreaKnown()/(double)totalArea) >= Constants.TERRITORY_PERCENT_EXPLORED_GOAL)) {
             timer.stop();
             runNumber++;
-            if(isBatch && (runNumber < runNumMax))
+            if(isBatch && (runNumber < Constants.BATCH_RUNS)) {
+                finalLog();
                 restart();
+            } else if(isBatch && (runNumber == Constants.BATCH_RUNS)) {
+                finalLog();
+                updateRobotsAndRestart(this.numRobots + 1);
+            }
+        }
+    }
+
+    private void updateRobotsAndRestart(int dim) {
+        if(dim > Constants.BATCH_AGENTS){
+            updateEnvironmentAndRestart(this.environmentCounter+1);
+            return;
+        }
+        writeToTeamConfig(dim);
+
+        String [] par = new String[1];
+        par[0] = String.valueOf(this.environmentCounter);
+        MainGUI.main(par);
+    }
+
+    private void updateEnvironmentAndRestart(int n){
+        if(n > Constants.BATCH_ENVS){
+            return;
+        }
+
+        this.environmentCounter = n;
+        writeToTeamConfig(3);
+
+        String [] par = new String[1];
+        par[0] = String.valueOf(n);
+        MainGUI.main(par);
+    }
+
+    private void writeToTeamConfig(int n){
+        BufferedWriter bw = null;
+        BufferedReader br = null;
+        FileWriter fw = null;
+        FileReader fr = null;
+        String rFilename;
+        switch(this.environmentCounter){
+            case 1:
+                rFilename = "lastRoomsTeamStable";
+                break;
+            case 2:
+                rFilename = "lastMazeTeamStable";
+                break;
+            case 3:
+                rFilename = "lastLairTeamStable";
+                break;
+            default:
+                rFilename = "lastRoomsTeamStable";
+                break;
+        }
+        String wFilename = "lastteamconfig";
+        try {
+            File rFile = new File("C:/Users/marco/Documents/Tesi/MRESim/config/"+rFilename+".txt");
+            File wFile = new File("C:/Users/marco/Documents/Tesi/MRESim/config/"+wFilename+".txt");
+            fr = new FileReader(rFile.getAbsoluteFile());
+            fw = new FileWriter(wFile.getAbsoluteFile());
+
+            br = new BufferedReader(fr);
+            bw = new BufferedWriter(fw);
+            String currentLine;
+            int i = 0;
+            while ((currentLine = br.readLine()) != null && i < n) {
+                bw.write(currentLine);
+                bw.newLine();
+                i = i+1;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bw != null)
+                    bw.close();
+                if (fw != null)
+                    fw.close();
+                if (br != null)
+                    br.close();
+                if (fr != null)
+                    fr.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+
         }
     }
     
@@ -1121,6 +1209,17 @@ public class SimulationFramework implements ActionListener {
 // </editor-fold>     
   
 // <editor-fold defaultstate="collapsed" desc="Logging">
+    private void finalLog(){
+        double cum_dist = 0;
+        for (int i = 1; i < agent.length; i++) {
+            cum_dist = cum_dist + agent[i].getStats().getDistanceTraveled();
+        }
+        double av_dist = cum_dist/(numRobots-1);
+        double area_ex = ((double) agent[0].getStats().getAreaKnown() / (double) totalArea) * 100;
+        DecimalFormat df = new DecimalFormat("#.#");
+
+        Reserve.log(environmentCounter+"          "+(numRobots-1)+"            "+timeElapsed+"          "+avgCycleTime+"          "+df.format(area_ex)+"          "+df.format(av_dist),"personalConsole");
+    }
 
     private void logging() {
         // Note, logging of data is performed in updateGlobalData, should change to here when i have the time

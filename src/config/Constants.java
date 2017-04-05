@@ -135,7 +135,7 @@ public class Constants {
     public static final int MAX_TIME = 10000;
     
     // Percent of a territory that must be explored
-    public static final double TERRITORY_PERCENT_EXPLORED_GOAL = 0.98;
+    public static final double TERRITORY_PERCENT_EXPLORED_GOAL = 0.7;
     
     // Probability of new debris at each time step
     public static final double NEW_DEBRIS_LIKELIHOOD = 0.5;

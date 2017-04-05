@@ -825,7 +825,7 @@ public class Skeleton {
 
     public static void main(String args[]) {
 
-        SimulatorConfig tempSimConfig = new SimulatorConfig();
+        SimulatorConfig tempSimConfig = new SimulatorConfig(1);
 
         int[][] update = findSkeleton(tempSimConfig.getEnv().getFullStatus(), 70);
         writeToFile(update);

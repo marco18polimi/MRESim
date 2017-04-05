@@ -2,9 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1af4ec83-2cb6-438c-a042-35fb095a1534" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/exploration/Reserve.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastEnvironment.png" afterPath="$PROJECT_DIR$/config/lastEnvironment.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/SimulatorConfig.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/SimulatorConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/environment/Skeleton.class" afterPath="$PROJECT_DIR$/out/production/MRESim/environment/Skeleton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/FrontierExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/FrontierExploration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/RoleBasedExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/RoleBasedExploration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/UtilityExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/UtilityExploration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$1.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$10.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$11.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$12.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$13.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$14.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$15.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$16.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$17.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$18.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$19.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$2.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$20.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$3.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$4.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$5.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$6.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$7.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$8.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$9.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI.class" afterPath="$PROJECT_DIR$/out/production/MRESim/gui/MainGUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" afterPath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/RobotPanel.java" afterPath="$PROJECT_DIR$/src/gui/RobotPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastteamconfig.txt" afterPath="$PROJECT_DIR$/config/lastteamconfig.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Constants.java" afterPath="$PROJECT_DIR$/src/config/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/SimulatorConfig.java" afterPath="$PROJECT_DIR$/src/config/SimulatorConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/environment/Skeleton.java" afterPath="$PROJECT_DIR$/src/environment/Skeleton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" afterPath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/MainGUI.java" afterPath="$PROJECT_DIR$/src/gui/MainGUI.java" />
     </list>
     <ignored path="MRESim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,50 +62,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="271" column="75" selection-start-line="271" selection-start-column="71" selection-end-line="271" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RobotPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gui/RobotPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="336" column="44" selection-start-line="336" selection-start-column="44" selection-end-line="336" selection-end-column="44" />
+            <state relative-caret-position="136">
+              <caret line="398" column="12" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="12" />
               <folding>
-                <element signature="e#3494#3495#0" expanded="true" />
-                <element signature="e#3545#3546#0" expanded="true" />
+                <element signature="e#14818#14819#0" expanded="true" />
+                <element signature="e#14888#14889#0" expanded="true" />
+                <element signature="e#38549#38635#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowSettingsAgent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/ShowSettings/ShowSettingsAgent.java">
+      <file leaf-file-name="SimulationFramework.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/exploration/SimulationFramework.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+            <state relative-caret-position="26">
+              <caret line="574" column="22" selection-start-line="574" selection-start-column="22" selection-end-line="574" selection-end-column="22" />
+              <folding>
+                <element signature="e#2685#2766#0" expanded="true" />
+                <element signature="method#hasCellBeenSensedByAnyAgent#0;class#SimulationFramework#0" expanded="false" />
+                <element signature="method#readFile#0;class#SimulationFramework#0" expanded="false" />
+                <element signature="method#updateRunConfig#0;class#SimulationFramework#0" expanded="false" />
+                <element signature="method#start#0;class#SimulationFramework#0" expanded="false" />
+                <element signature="method#restart#0;class#SimulationFramework#0" expanded="false" />
+                <element signature="method#checkPause#0;class#SimulationFramework#0" expanded="false" />
+                <element signature="method#allAgentsDone#0;class#SimulationFramework#0" expanded="false" />
+                <element signature="n#!!doc;n#finalLog#0;n#SimulationFramework#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reserve.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/exploration/Reserve.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnvLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/EnvLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,8 +150,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/config/Constants.java" />
         <option value="$PROJECT_DIR$/src/gui/RobotPanel.java" />
+        <option value="$PROJECT_DIR$/src/config/SimulatorConfig.java" />
+        <option value="$PROJECT_DIR$/src/environment/Skeleton.java" />
+        <option value="$PROJECT_DIR$/src/exploration/Reserve.java" />
+        <option value="$PROJECT_DIR$/src/config/Constants.java" />
+        <option value="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
+        <option value="$PROJECT_DIR$/src/gui/MainGUI.java" />
       </list>
     </option>
   </component>
@@ -174,6 +247,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MRESim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MRESim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exploration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -669,12 +760,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491387010413</updated>
-      <workItem from="1491387016930" duration="2063000" />
+      <workItem from="1491387016930" duration="4769000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2063000" />
+    <option name="totallyTimeSpent" value="4769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -740,14 +831,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/CommunicationDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-986">
@@ -760,14 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="271" column="75" selection-start-line="271" selection-start-column="71" selection-end-line="271" selection-end-column="84" />
           <folding />
         </state>
       </provider>
@@ -785,19 +860,95 @@
         <state relative-caret-position="149">
           <caret line="326" column="24" selection-start-line="326" selection-start-column="21" selection-end-line="326" selection-end-column="31" />
           <folding>
-            <element signature="e#11258#11259#0" expanded="true" />
-            <element signature="e#11299#11300#0" expanded="true" />
+            <element signature="e#11258#11259#0" expanded="false" />
+            <element signature="e#11299#11300#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/RobotPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
+        <state relative-caret-position="38">
           <caret line="336" column="44" selection-start-line="336" selection-start-column="44" selection-end-line="336" selection-end-column="44" />
           <folding>
             <element signature="e#3494#3495#0" expanded="true" />
             <element signature="e#3545#3546#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environment/Skeleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="827" column="61" selection-start-line="827" selection-start-column="61" selection-end-line="827" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/EnvLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/SimulatorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3859">
+          <caret line="509" column="26" selection-start-line="509" selection-start-column="26" selection-end-line="509" selection-end-column="26" />
+          <folding>
+            <element signature="e#1977#2051#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/Reserve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/SimulationFramework.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="574" column="22" selection-start-line="574" selection-start-column="22" selection-end-line="574" selection-end-column="22" />
+          <folding>
+            <element signature="e#2685#2766#0" expanded="true" />
+            <element signature="method#hasCellBeenSensedByAnyAgent#0;class#SimulationFramework#0" expanded="false" />
+            <element signature="method#readFile#0;class#SimulationFramework#0" expanded="false" />
+            <element signature="method#updateRunConfig#0;class#SimulationFramework#0" expanded="false" />
+            <element signature="method#start#0;class#SimulationFramework#0" expanded="false" />
+            <element signature="method#restart#0;class#SimulationFramework#0" expanded="false" />
+            <element signature="method#checkPause#0;class#SimulationFramework#0" expanded="false" />
+            <element signature="method#allAgentsDone#0;class#SimulationFramework#0" expanded="false" />
+            <element signature="n#!!doc;n#finalLog#0;n#SimulationFramework#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="398" column="12" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="12" />
+          <folding>
+            <element signature="e#14818#14819#0" expanded="true" />
+            <element signature="e#14888#14889#0" expanded="true" />
+            <element signature="e#38549#38635#0" expanded="true" />
           </folding>
         </state>
       </provider>
