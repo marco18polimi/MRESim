@@ -330,7 +330,7 @@ public class RobotPanel extends javax.swing.JPanel {
 
         toggleCommRange.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         toggleCommRange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/commrangeOn.png"))); // NOI18N
-        toggleCommRange.setSelected(true);
+        toggleCommRange.setSelected(false);
         toggleCommRange.setToolTipText("Communication Range");
         toggleCommRange.setBorderPainted(false);
         toggleCommRange.setContentAreaFilled(false);

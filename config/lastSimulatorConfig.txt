@@ -1,4 +1,4 @@
-FrontierExploration
+LeaderFollower
 UtilReturn
 C:\Users\Victor\Documents\real1\98obst2\ag.txt
 PropModel1
@@ -16,3 +16,13 @@ false
 false
 true
 0.7
+false
+false
+false
+null
+false
+400.0
+false
+false
+false
+false
