@@ -140,6 +140,9 @@ public class RealAgent extends BasicAgent implements Agent {
     private boolean free;
     private RealAgent buddy;
 
+    //Added for PureExploration
+    private LinkedList teamPositioning;
+
     public RealAgent(int envWidth, int envHeight, RobotConfig robot, SimulatorConfig simConfig) {
         super(robot.getRobotNumber(), 
               robot.getName(), 
@@ -200,12 +203,18 @@ public class RealAgent extends BasicAgent implements Agent {
         follower = false;
         free = false;
         buddy = null;
+
+        teamPositioning = new LinkedList<Point>();
     }
   
 // </editor-fold>     
 
     
 // <editor-fold defaultstate="collapsed" desc="Get and Set">
+
+    public LinkedList<Point> getTeamPositioning(){ return this.teamPositioning; }
+
+    public void setTeamPositioning(LinkedList<Point> tp){ this.teamPositioning = tp; }
 
     public boolean isFree(){ return this.free; }
 

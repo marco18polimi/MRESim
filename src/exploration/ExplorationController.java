@@ -1,7 +1,9 @@
-package environment;
+package exploration;
 
 import agents.RealAgent;
 import config.Constants;
+import environment.ContourTracer;
+import environment.Frontier;
 
 import java.awt.*;
 import java.util.LinkedList;
@@ -10,7 +12,7 @@ import java.util.PriorityQueue;
 /**
  * Created by marco on 05/04/2017.
  */
-public class FrontierController {
+public class ExplorationController {
 
     //<editor-fold defaultstate="collapsed" desc="Calculate and set agent's frontiers">
     public static void calculateFrontiers(RealAgent agent) {
