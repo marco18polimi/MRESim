@@ -393,14 +393,17 @@ public class MainGUI extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         int envCount;
+        boolean visibility;
         if(args.length == 0){
+            visibility = true;
             envCount = 1;
         }else{
+            visibility = false;
             envCount = Integer.parseInt(args[0]);
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainGUI(envCount).setVisible(true);
+                new MainGUI(envCount).setVisible(visibility);
             }
         });
     }   

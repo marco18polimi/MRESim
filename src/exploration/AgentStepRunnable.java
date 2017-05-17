@@ -88,6 +88,7 @@ public class AgentStepRunnable implements Runnable{
         }
         while (distance_left > 0)
         {
+
             //<editor-fold defaultstate="collapsed" desc="Get next step">
             nextStep = agent.takeStep(timeElapsed);
             if(nextStep == null) {
