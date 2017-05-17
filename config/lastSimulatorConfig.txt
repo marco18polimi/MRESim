@@ -1,4 +1,4 @@
-LeaderFollower
+PureExploration
 UtilReturn
 C:\Users\Victor\Documents\real1\98obst2\ag.txt
 PropModel1

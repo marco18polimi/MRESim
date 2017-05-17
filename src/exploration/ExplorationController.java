@@ -15,6 +15,7 @@ import java.util.PriorityQueue;
 public class ExplorationController {
 
     //<editor-fold defaultstate="collapsed" desc="Calculate and set agent's frontiers">
+
     public static void calculateFrontiers(RealAgent agent) {
         // If recalculating frontiers, must set old frontiers dirty for image rendering
         for(Frontier f : agent.getFrontiers())
@@ -36,6 +37,14 @@ public class ExplorationController {
             }
         }
         agent.setFrontiers(frontiers);
+    }
+
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="Calculate and set agent's team positioning">
+
+    public static void calculateTeamPositioning(RealAgent agent){
+
     }
 
     // </editor-fold>

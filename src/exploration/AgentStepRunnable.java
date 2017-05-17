@@ -93,7 +93,7 @@ public class AgentStepRunnable implements Runnable{
 
             //<editor-fold defaultstate="collapsed" desc="Get next step">
 
-            if(true) {
+            if(simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("PureExploration")) {
                 // <editor-fold defaultstate="collapsed" desc="Check environment error">
                 if (agent.getEnvError()) {
                     SimulationFramework.log("Env error", "errConsole");
@@ -103,7 +103,7 @@ public class AgentStepRunnable implements Runnable{
                 // </editor-fold>
 
                 // <editor-fold defaultstate="collapsed" desc="There is a plan but it can be time to re-plan">
-                 else if (agent.getPath().found && agent.getPath().getPoints().size() >= 2) {
+                else if (agent.getPath().found && agent.getPath().getPoints().size() >= 2) {
                    if (agent.getStats().getTimeSinceLastPlan() < Constants.REPLAN_INTERVAL || agent.getFirstCall()) {
                         nextStep = agent.getNextPathPoint();
                     } else {

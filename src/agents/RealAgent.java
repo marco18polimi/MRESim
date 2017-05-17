@@ -56,6 +56,8 @@ import exploration.rendezvous.SinglePointRendezvousStrategy;
 import exploration.rendezvous.SinglePointRendezvousStrategySettings;
 import java.util.*;
 import java.awt.*;
+
+import exploration.thesis.PureExploration;
 import path.Path;
 
 
@@ -563,6 +565,9 @@ public class RealAgent extends BasicAgent implements Agent {
                 case RoleBasedExploration:   
                                              nextStep = RoleBasedExploration.takeStep(this, timeElapsed, rendezvousStrategy);
                                              break;
+                case PureExploration:
+                                             nextStep = PureExploration.takeStep(this,env);
+                                             break;
                 default:                     break;
             }
         } else
@@ -577,6 +582,8 @@ public class RealAgent extends BasicAgent implements Agent {
                         && (this.getState() != ExploreState.GetInfoFromChild) && (this.getState() != ExploreState.WaitForChild)
                         && (this.getState() != ExploreState.WaitForParent))
                                                 nextStep = this.getNextPathPoint();
+                                             break;
+                case PureExploration:        nextStep = this.getNextPathPoint();
                                              break;
                 default:                     break;
             }
@@ -1203,7 +1210,7 @@ public class RealAgent extends BasicAgent implements Agent {
         needUpdatingAreaKnown = true;
         
         //replan?
-        stats.setTimeSinceLastPlan(Integer.MAX_VALUE);
+        //stats.setTimeSinceLastPlan(Integer.MAX_VALUE);
     }
     
     public boolean isCommunicating() {

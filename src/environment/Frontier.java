@@ -65,7 +65,7 @@ public class Frontier implements Comparable<Frontier>  {
         this.polygonOutline = po;
         this.areaPolygon = createAreaPolygonFromList(po);
         this.area = calculateArea();
-        this.centre = calculateCentre();
+        this.centre = newCalculateCentre();
         this.distanceToCentre = centre.distance(agentX, agentY);
     }
     
@@ -243,6 +243,19 @@ public class Frontier implements Comparable<Frontier>  {
         
         
         return runningTotal + calculatePerimeterApprox();
+    }
+
+    private Point newCalculateCentre(){
+        double sum_x = 0;
+        double sum_y = 0;
+        for(Point p : this.polygonOutline){
+            sum_x = sum_x + p.getX();
+            sum_y = sum_y + p.getY();
+        }
+
+        double avg_x = sum_x/this.polygonOutline.size();
+        double avg_y = sum_y/this.polygonOutline.size();
+        return new Point((int)avg_x,(int)avg_y);
     }
     
     private Point calculateCentre() {
