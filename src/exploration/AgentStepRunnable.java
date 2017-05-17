@@ -42,6 +42,7 @@ package exploration;
 
 import agents.BasicAgent;
 import agents.RealAgent;
+import config.Constants;
 import config.SimulatorConfig;
 import static config.SimulatorConfig.exptype.RunFromLog;
 import environment.Environment;
