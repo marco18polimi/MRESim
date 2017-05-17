@@ -130,6 +130,16 @@ public class RealAgent extends BasicAgent implements Agent {
     
     private SimulatorConfig simConfig;
 
+    // Added for Reserve
+    private boolean starter;
+    private boolean firstCall;
+
+    //Added for BuddySystem
+    private boolean leader;
+    private boolean follower;
+    private boolean free;
+    private RealAgent buddy;
+
     public RealAgent(int envWidth, int envHeight, RobotConfig robot, SimulatorConfig simConfig) {
         super(robot.getRobotNumber(), 
               robot.getName(), 
@@ -182,12 +192,45 @@ public class RealAgent extends BasicAgent implements Agent {
         currentGoal = new Point(x,y);
         
         nearestBasePoint = null;
+
+        starter = false;
+        firstCall = false;
+
+        leader = false;
+        follower = false;
+        free = false;
+        buddy = null;
     }
   
 // </editor-fold>     
 
     
 // <editor-fold defaultstate="collapsed" desc="Get and Set">
+
+    public boolean isFree(){ return this.free; }
+
+    public void setFree(boolean f){ this.free = f; }
+
+    public boolean isLeader(){ return leader; }
+
+    public void setLeader(boolean l){ leader = l; }
+
+    public boolean isFollower(){ return this.follower; }
+
+    public void setFollower(boolean f){ this.follower = f; }
+
+    public RealAgent getBuddy(){ return buddy; }
+
+    public void setBuddy(RealAgent b){ buddy = b; }
+
+    public boolean getStarter(){ return starter; }
+
+    public void setStarter(boolean s){ starter = s; }
+
+    public boolean getFirstCall(){ return firstCall; }
+
+    public void setFirstCall(boolean fc){ firstCall = fc; }
+
     public AgentStats getStats() {
         return stats;
     }
@@ -459,7 +502,7 @@ public class RealAgent extends BasicAgent implements Agent {
         //occGrid.initializeTestBits();
     }
 
-    public Point takeStep(int timeElapsed) {
+    public Point takeStep(int timeElapsed,Environment env) {
         //this.simConfig = simConfig;
         long realtimeStartAgentStep = System.currentTimeMillis(); 
         Point nextStep = new Point(0,0);

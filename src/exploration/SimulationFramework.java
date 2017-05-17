@@ -1218,7 +1218,31 @@ public class SimulationFramework implements ActionListener {
         double area_ex = ((double) agent[0].getStats().getAreaKnown() / (double) totalArea) * 100;
         DecimalFormat df = new DecimalFormat("#.#");
 
-        Reserve.log(environmentCounter+"          "+(numRobots-1)+"            "+timeElapsed+"          "+avgCycleTime+"          "+df.format(area_ex)+"          "+df.format(av_dist),"personalConsole");
+        log(environmentCounter+"          "+(numRobots-1)+"            "+timeElapsed+"          "+avgCycleTime+"          "+df.format(area_ex)+"          "+df.format(av_dist),"personalConsole");
+    }
+
+    public static void log(String data,String filename){
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+        try {
+            File file;
+            file = new File("C:/Users/marco/Documents/Tesi/MRESim/logs/"+filename+".txt");
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            bw = new BufferedWriter(fw);
+            bw.write(data);
+            bw.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bw != null)
+                    bw.close();
+                if (fw != null)
+                    fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     private void logging() {

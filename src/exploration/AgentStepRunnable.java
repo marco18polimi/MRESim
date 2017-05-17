@@ -76,12 +76,13 @@ public class AgentStepRunnable implements Runnable{
         Point nextStep = null;
         double[] sensorData = null;
         double distance_left = agent.getSpeed();
+        agent.getStats().setTimeSinceLastPlan(agent.getStats().getTimeSinceLastPlan()+1);
         //profiling
         long realtimeStartAgentCycle = System.currentTimeMillis();
         
         //<editor-fold defaultstate="collapsed" desc="Continue along the path, until we have exhausted agent 'speed' per cycle or run out of path">
         if (simConfig.getExpAlgorithm() == RunFromLog) {
-            nextStep = agent.takeStep(timeElapsed);
+            nextStep = agent.takeStep(timeElapsed,env);
             agent.flush();
             sensorData = simFramework.findSensorData(agent, nextStep);
             agent.writeStep(nextStep, sensorData, true);
@@ -91,7 +92,35 @@ public class AgentStepRunnable implements Runnable{
         {
 
             //<editor-fold defaultstate="collapsed" desc="Get next step">
-            nextStep = agent.takeStep(timeElapsed);
+
+            if(true) {
+                // <editor-fold defaultstate="collapsed" desc="Check environment error">
+                if (agent.getEnvError()) {
+                    SimulationFramework.log("Env error", "errConsole");
+                    nextStep = RandomWalk.takeStep(agent);
+                    agent.setEnvError(false);
+                }
+                // </editor-fold>
+
+                // <editor-fold defaultstate="collapsed" desc="There is a plan but it can be time to re-plan">
+                else if (agent.getPath().found && agent.getPath().getPoints().size() >= 2) {
+                    if (agent.getStats().getTimeSinceLastPlan() < Constants.REPLAN_INTERVAL || agent.getFirstCall()) {
+                        nextStep = agent.getNextPathPoint();
+                    } else {
+                        nextStep = agent.takeStep(timeElapsed,env);
+                    }
+                }
+                // </editor-fold>
+
+                // <editor-fold defaultstate="collapsed" desc="Either there is not a plan or it's time to re-plan">
+                else {
+                    nextStep = agent.takeStep(timeElapsed,env);
+                }
+                // </editor-fold>
+            } else {
+                nextStep = agent.takeStep(timeElapsed,env);
+            }
+
             if(nextStep == null) {
                 nextStep = agent.getLocation();
                 System.out.println(agent + " !!! setting envError because nextStep is null, distance_left is " + distance_left);
