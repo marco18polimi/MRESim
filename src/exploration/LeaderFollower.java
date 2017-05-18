@@ -613,8 +613,7 @@ public class LeaderFollower {
                 contourCounter++;
             }
         }
-        //agent.setFrontiers(frontiers);
-        ExplorationController.calculateFrontiers(agent);
+        agent.setFrontiers(frontiers);
 
         System.out.print("retained " + contourCounter + " of them. ");
         System.out.println("Took " + (System.currentTimeMillis()-realtimeStart) + "ms.");

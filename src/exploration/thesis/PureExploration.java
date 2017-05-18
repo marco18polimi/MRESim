@@ -1,5 +1,7 @@
 package exploration.thesis;
 
+import agents.ActiveSet;
+import agents.IdleSet;
 import agents.RealAgent;
 import environment.Environment;
 import environment.Frontier;
@@ -10,54 +12,66 @@ import path.Path;
 
 import java.awt.*;
 import java.util.LinkedList;
-import java.util.PriorityQueue;
 
 /**
  * Created by marco on 17/05/2017.
  */
 public class PureExploration {
 
+    // <editor-fold defaultstate="collapsed" desc="TakeStep">
     public static Point takeStep(RealAgent agent, Environment env){
 
-        if(agent.getTimeElapsed() > 0) {
+        IdleSet idleSet = IdleSet.getInstance();
+        ActiveSet activeAgents = ActiveSet.getInstance();
+
+        // <editor-fold defaultstate="collapsed" desc="TIME 0: set strategy structure">
+        if(agent.getTimeElapsed() == 0){
+            idleSet.addPoolAgent(agent);
+        }
+        // </editor-fold>
+
+        // <editor-fold defaultstate="collapsed" desc="TIME > 0: move agents">
+        else if(agent.getTimeElapsed() > 0) {
             //Set agents frontiers
-            ExplorationController.calculateFrontiers(agent);
+            LinkedList<Frontier> frontiers = ExplorationController.calculateFrontiers(agent,env);
 
             //Get agent positioning
-            Point pos = agent.getLocation();
+            LinkedList<Point> teamPositioning = ExplorationController.calculateTeamPositioning();
 
             //Choose navigation goal
-            Point goal = goalFunction(agent,pos,env);
+            Point goal = leaderGoalFunction(agent,frontiers,teamPositioning);
             return goal;
         }
+        // </editor-fold>
 
         return agent.getLocation();
 
     }
+    // </editor-fold>
 
-    private static Point goalFunction(RealAgent agent,Point pos,Environment env){
+    // <editor-fold defaultstate="collapsed" desc="BETA: goal function for leader agents">
+    private static Point leaderGoalFunction(RealAgent agent,LinkedList<Frontier> frontiers,LinkedList<Point> teamPositioning){
         agent.getStats().setTimeSinceLastPlan(0);
 
-        //Get agent's frontiers
-        PriorityQueue<Frontier> frontiers = agent.getFrontiers();
+        //Check agent's frontiers
         if(agent.getFrontiers().isEmpty()){
-            Point base = agent.getTeammate(1).getLocation();
             agent.setMissionComplete(true);
-            return base;
+            agent.setPathToBaseStation();
+            return agent.getNextPathPoint();
         }
 
-        //Filter clean frotniers
-        LinkedList<Frontier> clean = filterCleanFrontiers(agent,env);
-        if(clean.isEmpty()){
+        //Check clean frontiers
+        if(frontiers.isEmpty()){
             agent.setMissionComplete(true);
             agent.setPathToBaseStation();
             return agent.getNextPathPoint();
         }
 
         //Calculate closer frontier
+        Point pos = agent.getLocation();
         double min = 1000000000;
         Frontier closer = null;
-        for(Frontier f: clean){
+        for(Frontier f: frontiers){
             if(pos.distance(f.getCentre()) < min){
                 closer = f;
                 min = pos.distance(f.getCentre());
@@ -69,30 +83,9 @@ public class PureExploration {
         return goal;
 
     }
+    // </editor-fold>
 
-    private static LinkedList<Frontier> filterCleanFrontiers(RealAgent agent,Environment env) {
-        PriorityQueue<Frontier> frontiers = agent.getFrontiers();
-        LinkedList<Frontier> clean = new LinkedList<>();
-        for(Frontier f: frontiers){
-            if(!closeToObstacle(f.getCentre(),env)) {
-                clean.add(f);
-            }
-        }
-
-        return clean;
-    }
-
-    private static boolean closeToObstacle(Point p,Environment env){
-        int x = (int)p.getX();
-        int y = (int)p.getY();
-        int margin = 2;
-
-        if(env.obstacleAt(x,y+margin) || env.obstacleAt(x,y-margin) || env.obstacleAt(x+margin,y) || env.obstacleAt(x-margin,y)){
-            return true;
-        }
-        return false;
-    }
-
+    // <editor-fold defaultstate="collapsed" desc="MoveAgent">
     private static Point moveAgent(RealAgent agent,Frontier f){
         Point nextStep;
         Path goal = agent.calculatePath(agent.getLocation(),f.getCentre());
@@ -130,5 +123,6 @@ public class PureExploration {
         agent.getPath().getPoints().remove(0);
         return agent.getNextPathPoint();
     }
+    // </editor-fold>
 
 }
