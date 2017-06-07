@@ -156,7 +156,7 @@ public class PureExploration {
         }
 
         //Move agent
-        Point goal = moveAgent(agent,closer);
+        Point goal = ExplorationController.moveAgent(agent,closer);
         return goal;
 
     }
@@ -185,46 +185,6 @@ public class PureExploration {
     // <editor-fold defaultstate="collapsed" desc="PHI: splitting function">
     private static Point splittingFunction(RealAgent agent){
         return agent.getLocation();
-    }
-    // </editor-fold>
-
-    // <editor-fold defaultstate="collapsed" desc="MoveAgent">
-    private static Point moveAgent(RealAgent agent,Frontier f){
-        Point nextStep;
-        Path goal = agent.calculatePath(agent.getLocation(),f.getCentre());
-        agent.setPath(goal);
-
-        // <editor-fold defaultstate="collapsed" desc="Handle path errors">
-        if (agent.getPath() == null
-                || agent.getPath().getPoints() == null
-                || agent.getPath().getPoints().isEmpty()) {
-            SimulationFramework.log("Path problems","errConsole");
-            LinkedList<Point> outline = f.getPolygonOutline();
-            boolean found = false;
-
-            for(Point p : outline){
-                SimulationFramework.log("Out. point: "+p,"errConsole");
-                Path curr = agent.calculatePath(agent.getLocation(),p);
-                agent.setPath(curr);
-                if (!(agent.getPath() == null)
-                        && !(agent.getPath().getPoints() == null)
-                        && !agent.getPath().getPoints().isEmpty()){
-                    found = true;
-                }
-            }
-
-            if(!found) {
-                nextStep = RandomWalk.takeStep(agent);
-                agent.setEnvError(false);
-                return nextStep;
-            }
-
-            SimulationFramework.log("Path problems SOLVED","errConsole");
-        }
-        // </editor-fold>
-
-        agent.getPath().getPoints().remove(0);
-        return agent.getNextPathPoint();
     }
     // </editor-fold>
 
