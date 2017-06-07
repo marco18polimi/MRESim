@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1af4ec83-2cb6-438c-a042-35fb095a1534" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/agents/ActiveSet.class" afterPath="$PROJECT_DIR$/out/production/MRESim/agents/ActiveSet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/agents/IdleSet.class" afterPath="$PROJECT_DIR$/out/production/MRESim/agents/IdleSet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/ExplorationController.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/ExplorationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/FrontierExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/FrontierExploration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/RoleBasedExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/RoleBasedExploration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/UtilityExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/UtilityExploration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesis/PureExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesis/PureExploration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastteamconfig.txt" afterPath="$PROJECT_DIR$/config/lastteamconfig.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/errConsole.txt" afterPath="$PROJECT_DIR$/logs/errConsole.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agents/ActiveSet.java" afterPath="$PROJECT_DIR$/src/agents/ActiveSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agents/IdleSet.java" afterPath="$PROJECT_DIR$/src/agents/IdleSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Constants.java" afterPath="$PROJECT_DIR$/src/config/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/ExplorationController.java" afterPath="$PROJECT_DIR$/src/exploration/ExplorationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" afterPath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" afterPath="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" />
-    </list>
+    <list default="true" id="1af4ec83-2cb6-438c-a042-35fb095a1534" name="Default" comment="" />
     <ignored path="MRESim.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,15 +25,15 @@
       <file leaf-file-name="PureExploration.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/exploration/thesis/PureExploration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+            <state relative-caret-position="378">
+              <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#402#459#0" expanded="true" />
                 <element signature="e#721#795#0" expanded="true" />
                 <element signature="e#1051#1135#0" expanded="true" />
                 <element signature="e#1303#1381#0" expanded="true" />
                 <element signature="e#1765#1845#0" expanded="true" />
-                <element signature="e#2569#2625#0" expanded="true" />
                 <element signature="method#leaderGoalFunction#0;class#PureExploration#0" expanded="false" />
                 <element signature="n#!!doc;n#proactivityFunction#0;n#PureExploration#0" expanded="true" />
                 <element signature="method#moveAgent#0;class#PureExploration#0" expanded="false" />
@@ -766,12 +746,12 @@
       <workItem from="1495484254138" duration="1786000" />
       <workItem from="1495560392876" duration="186000" />
       <workItem from="1496738452389" duration="861000" />
-      <workItem from="1496827585372" duration="984000" />
+      <workItem from="1496827585372" duration="1048000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29465000" />
+    <option name="totallyTimeSpent" value="29529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1198,15 +1178,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exploration/thesis/PureExploration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+        <state relative-caret-position="378">
+          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#402#459#0" expanded="true" />
             <element signature="e#721#795#0" expanded="true" />
             <element signature="e#1051#1135#0" expanded="true" />
             <element signature="e#1303#1381#0" expanded="true" />
             <element signature="e#1765#1845#0" expanded="true" />
-            <element signature="e#2569#2625#0" expanded="true" />
             <element signature="method#leaderGoalFunction#0;class#PureExploration#0" expanded="false" />
             <element signature="n#!!doc;n#proactivityFunction#0;n#PureExploration#0" expanded="true" />
             <element signature="method#moveAgent#0;class#PureExploration#0" expanded="false" />
