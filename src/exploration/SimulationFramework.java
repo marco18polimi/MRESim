@@ -53,17 +53,15 @@ import environment.Environment.Status;
 import exploration.rendezvous.IRendezvousStrategy;
 import exploration.rendezvous.RendezvousAgentData;
 import javax.swing.*;
+import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Point;
 import java.awt.Polygon;
 import java.io.*;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
+
 import path.Path;
 import org.json.*;
 
@@ -1219,6 +1217,20 @@ public class SimulationFramework implements ActionListener {
         DecimalFormat df = new DecimalFormat("#.#");
 
         log(environmentCounter+"          "+(numRobots-1)+"            "+timeElapsed+"          "+avgCycleTime+"          "+df.format(area_ex)+"          "+df.format(av_dist),"personalConsole");
+    }
+
+    public static void logIdleSet(){
+        LinkedList<RealAgent> pool = IdleSet.getInstance().getPool();
+        for(RealAgent a: pool){
+            log("["+a.getTimeElapsed()+"] "+a.getName()+" IN POOL","errConsole");
+        }
+    }
+
+    public static void logActiveSet(){
+        LinkedList<RealAgent> active = ActiveSet.getInstance().getActive();
+        for(RealAgent a: active){
+            log("["+a.getTimeElapsed()+"] "+a.getName()+" ACTIVE","errConsole");
+        }
     }
 
     public static void log(String data,String filename){

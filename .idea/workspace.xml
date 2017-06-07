@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1af4ec83-2cb6-438c-a042-35fb095a1534" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/agents/ActiveSet.class" afterPath="$PROJECT_DIR$/out/production/MRESim/agents/ActiveSet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/agents/IdleSet.class" afterPath="$PROJECT_DIR$/out/production/MRESim/agents/IdleSet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/ExplorationController.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/ExplorationController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/FrontierExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/FrontierExploration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/RoleBasedExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/RoleBasedExploration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/UtilityExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/UtilityExploration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesis/PureExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesis/PureExploration.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastteamconfig.txt" afterPath="$PROJECT_DIR$/config/lastteamconfig.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/errConsole.txt" afterPath="$PROJECT_DIR$/logs/errConsole.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agents/ActiveSet.java" afterPath="$PROJECT_DIR$/src/agents/ActiveSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agents/IdleSet.java" afterPath="$PROJECT_DIR$/src/agents/IdleSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Constants.java" afterPath="$PROJECT_DIR$/src/config/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/ExplorationController.java" afterPath="$PROJECT_DIR$/src/exploration/ExplorationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/LeaderFollower.java" afterPath="$PROJECT_DIR$/src/exploration/LeaderFollower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" afterPath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" afterPath="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" />
     </list>
     <ignored path="MRESim.iws" />
@@ -31,13 +45,19 @@
       <file leaf-file-name="PureExploration.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/exploration/thesis/PureExploration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+            <state relative-caret-position="242">
+              <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#666#745#0" expanded="true" />
+                <element signature="e#721#795#0" expanded="true" />
+                <element signature="e#1051#1135#0" expanded="true" />
+                <element signature="e#1303#1381#0" expanded="true" />
+                <element signature="e#1765#1845#0" expanded="true" />
+                <element signature="e#2569#2625#0" expanded="true" />
+                <element signature="method#leaderGoalFunction#0;class#PureExploration#0" expanded="false" />
+                <element signature="n#!!doc;n#proactivityFunction#0;n#PureExploration#0" expanded="true" />
                 <element signature="method#moveAgent#0;class#PureExploration#0" expanded="false" />
-                <element signature="e#2914#2981#0" expanded="true" />
+                <element signature="e#6495#6562#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,25 +66,13 @@
       <file leaf-file-name="ExplorationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exploration/ExplorationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+            <state relative-caret-position="189">
+              <caret line="142" column="58" selection-start-line="142" selection-start-column="58" selection-end-line="142" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#382#465#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AgentStepRunnable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exploration/AgentStepRunnable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="93" column="73" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
-              <folding>
-                <element signature="e#3702#3774#0" expanded="true" />
-                <element signature="e#4064#4158#0" expanded="true" />
-                <element signature="e#4619#4718#0" expanded="true" />
+                <element signature="e#2321#2404#0" expanded="true" />
+                <element signature="e#2888#2960#0" expanded="true" />
+                <element signature="class#AgentFrontierPair#0;class#ExplorationController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,23 +100,25 @@
       <list>
         <option value="$PROJECT_DIR$/src/gui/RobotPanel.java" />
         <option value="$PROJECT_DIR$/src/environment/Skeleton.java" />
-        <option value="$PROJECT_DIR$/src/config/Constants.java" />
         <option value="$PROJECT_DIR$/src/environment/OccupancyGrid.java" />
         <option value="$PROJECT_DIR$/src/gui/MainGUI.java" />
         <option value="$PROJECT_DIR$/src/environment/FrontierController.java" />
         <option value="$PROJECT_DIR$/src/exploration/Reserve.java" />
-        <option value="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
         <option value="$PROJECT_DIR$/src/environment/Frontier.java" />
         <option value="$PROJECT_DIR$/src/config/SimulatorConfig.java" />
         <option value="$PROJECT_DIR$/src/agents/RealAgent.java" />
         <option value="$PROJECT_DIR$/src/exploration/AgentStepRunnable.java" />
         <option value="$PROJECT_DIR$/src/agents/AgentPool.java" />
         <option value="$PROJECT_DIR$/src/agents/AgentActive.java" />
+        <option value="$PROJECT_DIR$/src/exploration/LeaderFollower.java" />
+        <option value="$PROJECT_DIR$/src/config/Constants.java" />
+        <option value="$PROJECT_DIR$/src/agents/LeaderSet.java" />
         <option value="$PROJECT_DIR$/src/agents/IdleSet.java" />
         <option value="$PROJECT_DIR$/src/agents/ActiveSet.java" />
+        <option value="$PROJECT_DIR$/src/agents/FollowerSet.java" />
+        <option value="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
         <option value="$PROJECT_DIR$/src/exploration/ExplorationController.java" />
         <option value="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" />
-        <option value="$PROJECT_DIR$/src/exploration/LeaderFollower.java" />
       </list>
     </option>
   </component>
@@ -149,9 +159,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -234,28 +243,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="exploration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thesis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MRESim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MRESim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="environment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -298,6 +285,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -770,12 +758,20 @@
       <workItem from="1491485038973" duration="87000" />
       <workItem from="1495037445025" duration="805000" />
       <workItem from="1495039706417" duration="5616000" />
-      <workItem from="1495126375924" duration="3297000" />
+      <workItem from="1495126375924" duration="3354000" />
+      <workItem from="1495213511633" duration="3143000" />
+      <workItem from="1495268101013" duration="1879000" />
+      <workItem from="1495300215545" duration="1706000" />
+      <workItem from="1495469772117" duration="1840000" />
+      <workItem from="1495484254138" duration="1786000" />
+      <workItem from="1495560392876" duration="186000" />
+      <workItem from="1496738452389" duration="861000" />
+      <workItem from="1496827585372" duration="984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17023000" />
+    <option name="totallyTimeSpent" value="29465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -783,18 +779,18 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -804,8 +800,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -820,7 +816,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -828,28 +826,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/exploration/ExplorationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#382#465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/LeaderFollower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5219">
-          <caret line="617" column="53" selection-start-line="617" selection-start-column="53" selection-end-line="617" selection-end-column="53" />
-          <folding>
-            <element signature="e#13503#13572#0" expanded="false" />
-            <element signature="method#inRangeOfTeammate#0;class#LeaderFollower#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/environment/ContourTracer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
@@ -862,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -870,15 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="574" column="22" selection-start-line="574" selection-start-column="22" selection-end-line="574" selection-end-column="22" />
-          <folding>
-            <element signature="method#hasCellBeenSensedByAnyAgent#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="e#13338#13406#0" expanded="true" />
-            <element signature="method#readFile#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#updateRunConfig#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#start#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#restart#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#checkPause#0;class#SimulationFramework#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -887,9 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-          <folding>
-            <element signature="e#4499#4565#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,7 +861,7 @@
         <state relative-caret-position="340">
           <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
           <folding>
-            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="true" />
+            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -915,7 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1700">
           <caret line="407" column="0" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,7 +887,9 @@
           <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#465#0" expanded="true" />
+            <element signature="e#2321#2404#0" expanded="true" />
+            <element signature="e#2888#2960#0" expanded="true" />
+            <element signature="class#AgentFrontierPair#0;class#ExplorationController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -934,10 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="617" column="53" selection-start-line="617" selection-start-column="53" selection-end-line="617" selection-end-column="53" />
-          <folding>
-            <element signature="e#13503#13572#0" expanded="false" />
-            <element signature="method#inRangeOfTeammate#0;class#LeaderFollower#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -953,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -961,15 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="574" column="22" selection-start-line="574" selection-start-column="22" selection-end-line="574" selection-end-column="22" />
-          <folding>
-            <element signature="method#hasCellBeenSensedByAnyAgent#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="e#13338#13406#0" expanded="true" />
-            <element signature="method#readFile#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#updateRunConfig#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#start#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#restart#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#checkPause#0;class#SimulationFramework#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -978,9 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-          <folding>
-            <element signature="e#4499#4565#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,7 +936,7 @@
         <state relative-caret-position="238">
           <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
           <folding>
-            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="true" />
+            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1006,7 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1700">
           <caret line="407" column="0" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,7 +962,9 @@
           <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#465#0" expanded="true" />
+            <element signature="e#2321#2404#0" expanded="true" />
+            <element signature="e#2888#2960#0" expanded="true" />
+            <element signature="class#AgentFrontierPair#0;class#ExplorationController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1025,10 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#13503#13572#0" expanded="false" />
-            <element signature="method#inRangeOfTeammate#0;class#LeaderFollower#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,15 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3723">
           <caret line="574" column="22" selection-start-line="574" selection-start-column="22" selection-end-line="574" selection-end-column="22" />
-          <folding>
-            <element signature="method#hasCellBeenSensedByAnyAgent#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="e#13338#13406#0" expanded="true" />
-            <element signature="method#readFile#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#updateRunConfig#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#start#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#restart#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#checkPause#0;class#SimulationFramework#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,7 +989,7 @@
         <state relative-caret-position="238">
           <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
           <folding>
-            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="true" />
+            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1111,7 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="827" column="61" selection-start-line="827" selection-start-column="61" selection-end-line="827" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,7 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="246" column="46" selection-start-line="246" selection-start-column="46" selection-end-line="246" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,27 +1080,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exploration/Reserve.java" />
-    <entry file="file://$PROJECT_DIR$/src/exploration/SimulationFramework.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="1220" column="8" selection-start-line="1220" selection-start-column="8" selection-end-line="1220" selection-end-column="8" />
-          <folding>
-            <element signature="method#hasCellBeenSensedByAnyAgent#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="e#13338#13406#0" expanded="true" />
-            <element signature="method#readFile#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#updateRunConfig#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#start#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#restart#0;class#SimulationFramework#0" expanded="false" />
-            <element signature="method#checkPause#0;class#SimulationFramework#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="385" column="27" selection-start-line="385" selection-start-column="27" selection-end-line="385" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,9 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2013">
           <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-          <folding>
-            <element signature="e#4499#4565#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,17 +1099,7 @@
         <state relative-caret-position="253">
           <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
           <folding>
-            <element signature="e#11801#11863#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="938">
-          <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="true" />
+            <element signature="e#11801#11863#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1206,9 +1109,9 @@
         <state relative-caret-position="582">
           <caret line="1214" column="4" selection-start-line="1214" selection-start-column="4" selection-end-line="1214" selection-end-column="4" />
           <folding>
-            <element signature="n#!!doc;n#stats#0;n#RealAgent#0" expanded="true" />
-            <element signature="e#7142#7202#0" expanded="true" />
-            <element signature="e#15876#15953#0" expanded="true" />
+            <element signature="n#!!doc;n#stats#0;n#RealAgent#0" expanded="false" />
+            <element signature="e#7142#7202#0" expanded="false" />
+            <element signature="e#15876#15953#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1217,11 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="93" column="73" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
-          <folding>
-            <element signature="e#3702#3774#0" expanded="true" />
-            <element signature="e#4064#4158#0" expanded="true" />
-            <element signature="e#4619#4718#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1233,59 +1131,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/LeaderFollower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="615" column="8" selection-start-line="615" selection-start-column="8" selection-end-line="615" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="137" column="69" selection-start-line="137" selection-start-column="69" selection-end-line="137" selection-end-column="69" />
+          <folding>
+            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/agents/IdleSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc;n#IdleSet#0;n#IdleSet#0" expanded="true" />
-            <element signature="n#!!doc;n#getPool#0;n#IdleSet#0" expanded="true" />
-            <element signature="n#!!doc;n#addPoolAgent#0;n#IdleSet#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="342">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/agents/ActiveSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc;n#ActiveSet#0;n#ActiveSet#0" expanded="true" />
-            <element signature="n#!!doc;n#addActiveAgent#0;n#ActiveSet#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/agents/LeaderSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/agents/FollowerSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/SimulationFramework.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="303" column="115" selection-start-line="303" selection-start-column="115" selection-end-line="303" selection-end-column="115" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exploration/ExplorationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+        <state relative-caret-position="189">
+          <caret line="142" column="58" selection-start-line="142" selection-start-column="58" selection-end-line="142" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/LeaderFollower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="615" column="8" selection-start-line="615" selection-start-column="8" selection-end-line="615" selection-end-column="8" />
-          <folding>
-            <element signature="method#inRangeOfTeammate#0;class#LeaderFollower#0" expanded="false" />
+            <element signature="e#2321#2404#0" expanded="true" />
+            <element signature="e#2888#2960#0" expanded="true" />
+            <element signature="class#AgentFrontierPair#0;class#ExplorationController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exploration/thesis/PureExploration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+        <state relative-caret-position="242">
+          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#666#745#0" expanded="true" />
+            <element signature="e#721#795#0" expanded="true" />
+            <element signature="e#1051#1135#0" expanded="true" />
+            <element signature="e#1303#1381#0" expanded="true" />
+            <element signature="e#1765#1845#0" expanded="true" />
+            <element signature="e#2569#2625#0" expanded="true" />
+            <element signature="method#leaderGoalFunction#0;class#PureExploration#0" expanded="false" />
+            <element signature="n#!!doc;n#proactivityFunction#0;n#PureExploration#0" expanded="true" />
             <element signature="method#moveAgent#0;class#PureExploration#0" expanded="false" />
-            <element signature="e#2914#2981#0" expanded="true" />
+            <element signature="e#6495#6562#0" expanded="true" />
           </folding>
         </state>
       </provider>

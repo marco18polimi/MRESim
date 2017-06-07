@@ -22,6 +22,11 @@ public class ActiveSet {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Getters and setters">
+
+    public boolean isActive(RealAgent a){
+        return active.contains(a);
+    }
+
     public LinkedList<RealAgent> getActive(){ return active; }
 
     public void setActive(LinkedList<RealAgent> a){ active = a; }

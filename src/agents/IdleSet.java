@@ -22,6 +22,11 @@ public class IdleSet {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Getters and setters">
+
+    public boolean isIdle(RealAgent a){
+        return pool.contains(a);
+    }
+
     public LinkedList<RealAgent> getPool(){ return pool; }
 
     public void setPool(LinkedList<RealAgent> p){ pool = p; }
