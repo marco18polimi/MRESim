@@ -58,6 +58,7 @@ import java.util.*;
 import java.awt.*;
 
 import exploration.thesis.PureExploration;
+import exploration.thesis.Reserve;
 import path.Path;
 
 
@@ -568,6 +569,9 @@ public class RealAgent extends BasicAgent implements Agent {
                 case PureExploration:
                                              nextStep = PureExploration.takeStep(this,env);
                                              break;
+                case Reserve:
+                                             nextStep = Reserve.takeStep(this,env);
+                                             break;
                 default:                     break;
             }
         } else
@@ -584,6 +588,8 @@ public class RealAgent extends BasicAgent implements Agent {
                                                 nextStep = this.getNextPathPoint();
                                              break;
                 case PureExploration:        nextStep = this.getNextPathPoint();
+                                             break;
+                case Reserve:                nextStep = this.getNextPathPoint();
                                              break;
                 default:                     break;
             }

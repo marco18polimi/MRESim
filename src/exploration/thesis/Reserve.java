@@ -4,7 +4,6 @@ import agents.*;
 import environment.Environment;
 import environment.Frontier;
 import exploration.ExplorationController;
-import exploration.LeaderFollower;
 import exploration.RandomWalk;
 import exploration.SimulationFramework;
 import path.Path;
@@ -13,9 +12,9 @@ import java.awt.*;
 import java.util.LinkedList;
 
 /**
- * Created by marco on 17/05/2017.
+ * Created by marco on 07/06/2017.
  */
-public class PureExploration {
+public class Reserve {
 
     // <editor-fold defaultstate="collapsed" desc="TakeStep">
     /**
@@ -25,56 +24,37 @@ public class PureExploration {
      * @return nextStep
      */
     public static Point takeStep(RealAgent agent, Environment env){
-
         Point nextStep = agent.getLocation();
 
         // <editor-fold defaultstate="collapsed" desc="Get strategy support sets">
         IdleSet idleSet = IdleSet.getInstance();
         ActiveSet activeSet = ActiveSet.getInstance();
-        LeaderSet leaderSet = LeaderSet.getInstance();
-        FollowerSet followerSet = FollowerSet.getInstance();
         // </editor-fold>
 
         // <editor-fold defaultstate="collapsed" desc="TIME = 0: set strategy support sets">
         if(agent.getTimeElapsed() == 0){
             idleSet.addPoolAgent(agent);
-            leaderSet.addLeader(agent);
         }
         // </editor-fold>
 
         // <editor-fold defaultstate="collapsed" desc="TIME = 1 move starting agents">
         else if (agent.getTimeElapsed() == 1){
+            //Choose the pair agent-frontier with the minimum distance and set that agent as starting one
             ExplorationController.setStartingAgent(agent,env);
             if(agent.getStarter()){
+                //Re-plan activity
                 Point goal = rePlan(agent,env);
+
+                //Activate the agent from the pool
                 idleSet.removePoolAgent(agent);
                 activeSet.addActiveAgent(agent);
-                nextStep = goal;
-            }
-        }
-        // </editor-fold>
 
-        // <editor-fold defaultstate="collapsed" desc="TIME > 1: move remaining agents">
-        else if(agent.getTimeElapsed() > 1) {
-            if(activeSet.isActive(agent)) {
-                Point goal = rePlan(agent,env);
                 nextStep = goal;
-            }else{
-                Point activationGoal = activationFunction(agent);
-                if(activationGoal != null){
-                    idleSet.removePoolAgent(agent);
-                    activeSet.addActiveAgent(agent);
-                    nextStep = activationGoal;
-                }else{
-                    Point proactivityGoal = proactivityFunction(agent);
-                    nextStep = proactivityGoal;
-                }
             }
         }
         // </editor-fold>
 
         return nextStep;
-
     }
     // </editor-fold>
 
@@ -95,26 +75,11 @@ public class PureExploration {
         //G set
         LinkedList<Point> teamGoals = ExplorationController.calculateTeamGoals();
 
-        //Call goal function
+        //Call appropriate goal function
         Point goal = null;
-        if(LeaderSet.getInstance().isLeader(agent)){
-            goal = leaderGoalFunction(agent,frontiers,teamPositioning,teamGoals);
-        }else if(FollowerSet.getInstance().isFollower(agent)){
-            Point splittingGoal = splittingFunction(agent);
-            if(splittingGoal != null){
-                goal = splittingGoal;
-            }else {
-                goal = followerGoalFunction(agent, frontiers, teamPositioning, teamGoals);
-            }
-        }
+        goal = leaderGoalFunction(agent,frontiers,teamPositioning,teamGoals);
 
         return goal;
-    }
-    // </editor-fold>
-
-    // <editor-fold defaultstate="collapsed" desc="ALPHA: Activation function">
-    private static Point activationFunction(RealAgent agent){
-        return agent.getLocation();
     }
     // </editor-fold>
 
@@ -162,30 +127,5 @@ public class PureExploration {
     }
     // </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="GAMMA: goal function for following agents">
-    /**
-     * Calculate goal location for following agents
-     * @param agent
-     * @param frontiers
-     * @param teamPositioning
-     * @param teamGoals
-     * @return followerGoal
-     */
-    private static Point followerGoalFunction(RealAgent agent,LinkedList<Frontier> frontiers,LinkedList<Point> teamPositioning,LinkedList<Point> teamGoals){
-        return agent.getLocation();
-    }
-    // </editor-fold>
-
-    // <editor-fold defaultstate="collapsed" desc="LAMBDA: proactivity function">
-    private static Point proactivityFunction(RealAgent agent){
-        return agent.getLocation();
-    }
-    // </editor-fold>
-
-    // <editor-fold defaultstate="collapsed" desc="PHI: splitting function">
-    private static Point splittingFunction(RealAgent agent){
-        return agent.getLocation();
-    }
-    // </editor-fold>
 
 }
