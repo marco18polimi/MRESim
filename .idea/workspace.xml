@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1af4ec83-2cb6-438c-a042-35fb095a1534" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/agents/RealAgent$1.class" afterPath="$PROJECT_DIR$/out/production/MRESim/agents/RealAgent$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/agents/RealAgent.class" afterPath="$PROJECT_DIR$/out/production/MRESim/agents/RealAgent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/SimulatorConfig$exptype.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/SimulatorConfig$exptype.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants$MapColor.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants$MapColor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/environment/Frontier.class" afterPath="$PROJECT_DIR$/out/production/MRESim/environment/Frontier.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/AgentStepRunnable.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/AgentStepRunnable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/ExplorationController$AgentFrontierPair.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/ExplorationController$AgentFrontierPair.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/ExplorationController.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/ExplorationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesis/PureExploration.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesis/PureExploration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesis/Reserve.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesis/Reserve.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" afterPath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/errConsole.txt" afterPath="$PROJECT_DIR$/logs/errConsole.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agents/RealAgent.java" afterPath="$PROJECT_DIR$/src/agents/RealAgent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/SimulatorConfig.java" afterPath="$PROJECT_DIR$/src/config/SimulatorConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/ExplorationController.java" afterPath="$PROJECT_DIR$/src/exploration/ExplorationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" afterPath="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Constants.java" afterPath="$PROJECT_DIR$/src/config/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/environment/Frontier.java" afterPath="$PROJECT_DIR$/src/environment/Frontier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/AgentStepRunnable.java" afterPath="$PROJECT_DIR$/src/exploration/AgentStepRunnable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesis/Reserve.java" afterPath="$PROJECT_DIR$/src/exploration/thesis/Reserve.java" />
     </list>
     <ignored path="MRESim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,38 +37,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PureExploration.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PureExploration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exploration/thesis/PureExploration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="188" column="21" selection-start-line="188" selection-start-column="21" selection-end-line="188" selection-end-column="21" />
+            <state relative-caret-position="184">
+              <caret line="182" column="21" selection-start-line="178" selection-start-column="4" selection-end-line="182" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#402#459#0" expanded="true" />
                 <element signature="e#721#795#0" expanded="true" />
                 <element signature="e#1051#1135#0" expanded="true" />
                 <element signature="e#1303#1381#0" expanded="true" />
-                <element signature="e#1765#1845#0" expanded="true" />
-                <element signature="e#2569#2625#0" expanded="true" />
-                <element signature="e#3946#4032#0" expanded="true" />
-                <element signature="n#!!doc;n#proactivityFunction#0;n#PureExploration#0" expanded="true" />
+                <element signature="e#3875#3876#0" expanded="true" />
+                <element signature="e#3917#3918#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reserve.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Reserve.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/exploration/thesis/Reserve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
+            <state relative-caret-position="133">
+              <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#359#416#0" expanded="true" />
-                <element signature="e#677#751#0" expanded="true" />
-                <element signature="e#891#975#0" expanded="true" />
-                <element signature="e#1103#1181#0" expanded="true" />
-                <element signature="e#1809#1865#0" expanded="true" />
+                <element signature="e#369#400#0" expanded="true" />
+                <element signature="e#747#821#0" expanded="true" />
+                <element signature="e#961#1045#0" expanded="true" />
+                <element signature="e#1173#1251#0" expanded="true" />
+                <element signature="e#1637#1717#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgentStepRunnable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/exploration/AgentStepRunnable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="95" column="86" selection-start-line="95" selection-start-column="86" selection-end-line="95" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReserveController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/exploration/ReserveController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc;n#getInstance#0;n#ReserveController#0" expanded="true" />
+                <element signature="e#740#808#0" expanded="true" />
+                <element signature="n#!!doc;n#addCallFrontiers#0;n#ReserveController#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Frontier.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/environment/Frontier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+              <folding>
+                <element signature="e#2001#2075#0" expanded="true" />
+                <element signature="n#!!doc;n#isClose#0;n#Frontier#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,11 +112,12 @@
       <file leaf-file-name="ExplorationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exploration/ExplorationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="172" column="10" selection-start-line="172" selection-start-column="10" selection-end-line="172" selection-end-column="10" />
+            <state relative-caret-position="1550">
+              <caret line="171" column="4" selection-start-line="171" selection-start-column="4" selection-end-line="171" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#400#483#0" expanded="true" />
+                <element signature="e#1473#1544#0" expanded="true" />
                 <element signature="e#2339#2422#0" expanded="true" />
                 <element signature="e#2906#2978#0" expanded="true" />
                 <element signature="e#3468#3535#0" expanded="true" />
@@ -116,12 +154,9 @@
         <option value="$PROJECT_DIR$/src/gui/MainGUI.java" />
         <option value="$PROJECT_DIR$/src/environment/FrontierController.java" />
         <option value="$PROJECT_DIR$/src/exploration/Reserve.java" />
-        <option value="$PROJECT_DIR$/src/environment/Frontier.java" />
-        <option value="$PROJECT_DIR$/src/exploration/AgentStepRunnable.java" />
         <option value="$PROJECT_DIR$/src/agents/AgentPool.java" />
         <option value="$PROJECT_DIR$/src/agents/AgentActive.java" />
         <option value="$PROJECT_DIR$/src/exploration/LeaderFollower.java" />
-        <option value="$PROJECT_DIR$/src/config/Constants.java" />
         <option value="$PROJECT_DIR$/src/agents/LeaderSet.java" />
         <option value="$PROJECT_DIR$/src/agents/IdleSet.java" />
         <option value="$PROJECT_DIR$/src/agents/ActiveSet.java" />
@@ -129,9 +164,13 @@
         <option value="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
         <option value="$PROJECT_DIR$/src/config/SimulatorConfig.java" />
         <option value="$PROJECT_DIR$/src/agents/RealAgent.java" />
-        <option value="$PROJECT_DIR$/src/exploration/thesis/Reserve.java" />
         <option value="$PROJECT_DIR$/src/exploration/ExplorationController.java" />
         <option value="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" />
+        <option value="$PROJECT_DIR$/src/environment/Frontier.java" />
+        <option value="$PROJECT_DIR$/src/exploration/ReserveController.java" />
+        <option value="$PROJECT_DIR$/src/exploration/AgentStepRunnable.java" />
+        <option value="$PROJECT_DIR$/src/config/Constants.java" />
+        <option value="$PROJECT_DIR$/src/exploration/thesis/Reserve.java" />
       </list>
     </option>
   </component>
@@ -172,7 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -320,6 +358,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -805,11 +844,12 @@
       <workItem from="1496738452389" duration="861000" />
       <workItem from="1496827585372" duration="1048000" />
       <workItem from="1496828899602" duration="1626000" />
+      <workItem from="1496830685479" duration="3430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31155000" />
+    <option name="totallyTimeSpent" value="34585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -822,14 +862,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -840,6 +879,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -864,13 +904,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/environment/OccupancyGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/exploration/SimulationFramework.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
@@ -918,6 +951,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#400#483#0" expanded="true" />
+            <element signature="e#1473#1544#0" expanded="true" />
             <element signature="e#2339#2422#0" expanded="true" />
             <element signature="e#2906#2978#0" expanded="true" />
             <element signature="e#3468#3535#0" expanded="true" />
@@ -996,6 +1030,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#400#483#0" expanded="true" />
+            <element signature="e#1473#1544#0" expanded="true" />
             <element signature="e#2339#2422#0" expanded="true" />
             <element signature="e#2906#2978#0" expanded="true" />
             <element signature="e#3468#3535#0" expanded="true" />
@@ -1123,20 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/environment/Frontier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2013">
-          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/AgentStepRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="93" column="73" selection-start-line="93" selection-start-column="73" selection-end-line="93" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/agents/TeammateAgent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
@@ -1149,16 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="615" column="8" selection-start-line="615" selection-start-column="8" selection-end-line="615" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="137" column="69" selection-start-line="137" selection-start-column="69" selection-end-line="137" selection-end-column="69" />
-          <folding>
-            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1213,13 +1224,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/environment/Frontier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+          <folding>
+            <element signature="e#2001#2075#0" expanded="true" />
+            <element signature="n#!!doc;n#isClose#0;n#Frontier#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/exploration/ExplorationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="172" column="10" selection-start-line="172" selection-start-column="10" selection-end-line="172" selection-end-column="10" />
+        <state relative-caret-position="1550">
+          <caret line="171" column="4" selection-start-line="171" selection-start-column="4" selection-end-line="171" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#400#483#0" expanded="true" />
+            <element signature="e#1473#1544#0" expanded="true" />
             <element signature="e#2339#2422#0" expanded="true" />
             <element signature="e#2906#2978#0" expanded="true" />
             <element signature="e#3468#3535#0" expanded="true" />
@@ -1229,35 +1252,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/thesis/Reserve.java">
+    <entry file="file://$PROJECT_DIR$/src/exploration/thesis/PureExploration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
+        <state relative-caret-position="184">
+          <caret line="182" column="21" selection-start-line="178" selection-start-column="4" selection-end-line="182" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#359#416#0" expanded="true" />
-            <element signature="e#677#751#0" expanded="true" />
-            <element signature="e#891#975#0" expanded="true" />
-            <element signature="e#1103#1181#0" expanded="true" />
-            <element signature="e#1809#1865#0" expanded="true" />
+            <element signature="e#721#795#0" expanded="true" />
+            <element signature="e#1051#1135#0" expanded="true" />
+            <element signature="e#1303#1381#0" expanded="true" />
+            <element signature="e#3875#3876#0" expanded="true" />
+            <element signature="e#3917#3918#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/thesis/PureExploration.java">
+    <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="188" column="21" selection-start-line="188" selection-start-column="21" selection-end-line="188" selection-end-column="21" />
+        <state relative-caret-position="131">
+          <caret line="100" column="48" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/AgentStepRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="95" column="86" selection-start-line="95" selection-start-column="86" selection-end-line="95" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/ReserveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#402#459#0" expanded="true" />
-            <element signature="e#721#795#0" expanded="true" />
-            <element signature="e#1051#1135#0" expanded="true" />
-            <element signature="e#1303#1381#0" expanded="true" />
-            <element signature="e#1765#1845#0" expanded="true" />
-            <element signature="e#2569#2625#0" expanded="true" />
-            <element signature="e#3946#4032#0" expanded="true" />
-            <element signature="n#!!doc;n#proactivityFunction#0;n#PureExploration#0" expanded="true" />
+            <element signature="n#!!doc;n#getInstance#0;n#ReserveController#0" expanded="true" />
+            <element signature="e#740#808#0" expanded="true" />
+            <element signature="n#!!doc;n#addCallFrontiers#0;n#ReserveController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/thesis/Reserve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#369#400#0" expanded="true" />
+            <element signature="e#747#821#0" expanded="true" />
+            <element signature="e#961#1045#0" expanded="true" />
+            <element signature="e#1173#1251#0" expanded="true" />
+            <element signature="e#1637#1717#0" expanded="true" />
           </folding>
         </state>
       </provider>

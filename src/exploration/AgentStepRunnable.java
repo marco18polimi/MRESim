@@ -93,7 +93,7 @@ public class AgentStepRunnable implements Runnable{
 
             //<editor-fold defaultstate="collapsed" desc="Get next step">
 
-            if(simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("PureExploration")) {
+            if(simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("Reserve")) {
                 // <editor-fold defaultstate="collapsed" desc="Check environment error">
                 if (agent.getEnvError()) {
                     SimulationFramework.log("Env error", "errConsole");

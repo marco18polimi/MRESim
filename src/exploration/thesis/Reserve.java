@@ -5,6 +5,7 @@ import environment.Environment;
 import environment.Frontier;
 import exploration.ExplorationController;
 import exploration.RandomWalk;
+import exploration.ReserveController;
 import exploration.SimulationFramework;
 import path.Path;
 
@@ -14,6 +15,7 @@ import java.util.LinkedList;
 /**
  * Created by marco on 07/06/2017.
  */
+@SuppressWarnings("Duplicates")
 public class Reserve {
 
     // <editor-fold defaultstate="collapsed" desc="TakeStep">
@@ -39,17 +41,33 @@ public class Reserve {
 
         // <editor-fold defaultstate="collapsed" desc="TIME = 1 move starting agents">
         else if (agent.getTimeElapsed() == 1){
-            //Choose the pair agent-frontier with the minimum distance and set that agent as starting one
             ExplorationController.setStartingAgent(agent,env);
             if(agent.getStarter()){
-                //Re-plan activity
                 Point goal = rePlan(agent,env);
 
-                //Activate the agent from the pool
                 idleSet.removePoolAgent(agent);
                 activeSet.addActiveAgent(agent);
 
                 nextStep = goal;
+            }
+        }
+        // </editor-fold>
+
+        // <editor-fold defaultstate="collapsed" desc="TIME > 1: move remaining agents">
+        else if(agent.getTimeElapsed() > 1) {
+            if(activeSet.isActive(agent)) {
+                Point goal = rePlan(agent,env);
+                nextStep = goal;
+            }else{
+                Point activationGoal = activationFunction(agent);
+                if(activationGoal != null){
+                    idleSet.removePoolAgent(agent);
+                    activeSet.addActiveAgent(agent);
+                    nextStep = activationGoal;
+                }else{
+                    Point proactivityGoal = proactivityFunction(agent);
+                    nextStep = proactivityGoal;
+                }
             }
         }
         // </editor-fold>
@@ -80,6 +98,37 @@ public class Reserve {
         goal = leaderGoalFunction(agent,frontiers,teamPositioning,teamGoals);
 
         return goal;
+    }
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="ALPHA: Activation function">
+    private static Point activationFunction(RealAgent agent){
+        agent.getStats().setTimeSinceLastPlan(0);
+        Point activationGoal = null;
+
+        try{
+            ReserveController.getInstance().getSem().acquire();
+            LinkedList<Frontier> freeCall = ReserveController.getInstance().getNotAssignedFrontiers();
+
+            if(!freeCall.isEmpty()){
+                Frontier f = ReserveController.getInstance().chooseBestReservePair(agent,freeCall);
+                if(f!=null){
+                    agent.setFirstCall(true);
+                    ReserveController.getInstance().setAssignedFrontier(f);
+
+                    IdleSet.getInstance().removePoolAgent(agent);
+                    ActiveSet.getInstance().addActiveAgent(agent);
+
+                    activationGoal = ExplorationController.moveAgent(agent,f);
+                }
+            }
+        }catch(InterruptedException e){
+            //Do something
+        }finally{
+            ReserveController.getInstance().getSem().release();
+        }
+
+        return activationGoal;
     }
     // </editor-fold>
 
@@ -120,6 +169,10 @@ public class Reserve {
             }
         }
 
+        //Call reserve agents
+        frontiers.remove(closer);
+        ReserveController.getInstance().addCallFrontiers(frontiers);
+
         //Move agent
         Point goal = ExplorationController.moveAgent(agent,closer);
         return goal;
@@ -127,5 +180,9 @@ public class Reserve {
     }
     // </editor-fold>
 
-
+    // <editor-fold defaultstate="collapsed" desc="LAMBDA: proactivity function">
+    private static Point proactivityFunction(RealAgent agent){
+        return agent.getLocation();
+    }
+    // </editor-fold>
 }

@@ -56,6 +56,7 @@ public class Constants {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Clustering constants">
+    public static final int CLOSE_PARAM = 75;
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Already present constants">
