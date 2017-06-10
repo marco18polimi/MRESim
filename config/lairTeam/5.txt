@@ -1,0 +1,6 @@
+1 BaseStation 390 40 0.0 0 3000 1000 BaseStation 1 1
+2 A 430 50 1.57 200 500 1000 Explorer 1 1
+3 B 410 50 1.57 200 500 1000 Explorer 1 1
+4 C 390 50 1.57 200 500 1000 Explorer 1 1
+5 D 370 50 1.57 200 500 1000 Explorer 1 1
+6 E 350 50 1.57 200 500 1000 Explorer 1 1

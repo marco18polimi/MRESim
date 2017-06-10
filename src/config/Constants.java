@@ -48,9 +48,9 @@ import java.awt.Color;
  */
 public class Constants {
     // <editor-fold defaultstate="collapsed" desc="Batch constants">
-    public static final int BATCH_RUNS = 1;
+    public static final int BATCH_RUNS = 10;
 
-    public static final int BATCH_AGENTS = 5;
+    public static final int BATCH_AGENTS = 10;
 
     public static final int BATCH_ENVS = 3;
     // </editor-fold>

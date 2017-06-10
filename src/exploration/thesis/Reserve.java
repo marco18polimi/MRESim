@@ -56,6 +56,9 @@ public class Reserve {
         // <editor-fold defaultstate="collapsed" desc="TIME > 1: move remaining agents">
         else if(agent.getTimeElapsed() > 1) {
             if(activeSet.isActive(agent)) {
+                if(agent.getFirstCall()){
+                    agent.setFirstCall(false);
+                }
                 Point goal = rePlan(agent,env);
                 nextStep = goal;
             }else{

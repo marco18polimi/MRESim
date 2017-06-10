@@ -210,8 +210,7 @@ public class RealAgent extends BasicAgent implements Agent {
         teamPositioning = new LinkedList<Point>();
     }
   
-// </editor-fold>     
-
+// </editor-fold>
     
 // <editor-fold defaultstate="collapsed" desc="Get and Set">
 

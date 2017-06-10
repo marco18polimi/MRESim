@@ -398,7 +398,7 @@ public class MainGUI extends javax.swing.JFrame {
             visibility = true;
             envCount = 1;
         }else{
-            visibility = false;
+            visibility = true;
             envCount = Integer.parseInt(args[0]);
         }
         java.awt.EventQueue.invokeLater(new Runnable() {

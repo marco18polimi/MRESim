@@ -161,6 +161,17 @@ public class SimulationFramework implements ActionListener {
 
         // Initialize Image
         updateImage(true);
+
+        //Clear all strategies structures
+        clearAll();
+    }
+
+    private void clearAll(){
+        if(simConfig.getExpAlgorithm() == exptype.Reserve){
+            //IdleSet.getInstance().getPool().clear();
+            //ActiveSet.getInstance().getActive().clear();
+            ReserveController.getInstance().getCallFrontiers().clear();
+        }
     }
             
     private void createAgents(RobotTeamConfig robotTeamConfig) {
@@ -460,7 +471,7 @@ public class SimulationFramework implements ActionListener {
     public void start() {
         runNumber = 0;
         //Check if we are running batch
-        if (simConfig.getExpAlgorithm() == exptype.BatchRun || simConfig.getExpAlgorithm() == exptype.LeaderFollower) {
+        if (simConfig.getExpAlgorithm() == exptype.PureExploration || simConfig.getExpAlgorithm() == exptype.Reserve) {
             isBatch = true;
         } else isBatch = false;
         
@@ -531,7 +542,7 @@ public class SimulationFramework implements ActionListener {
     }
 
     private void updateRobotsAndRestart(int dim) {
-        if(dim > Constants.BATCH_AGENTS){
+        if(dim > (Constants.BATCH_AGENTS+1)){
             updateEnvironmentAndRestart(this.environmentCounter+1);
             return;
         }
@@ -560,24 +571,25 @@ public class SimulationFramework implements ActionListener {
         BufferedReader br = null;
         FileWriter fw = null;
         FileReader fr = null;
-        String rFilename;
+        String rFolder;
+        String rFilename = String.valueOf(n-1);
         switch(this.environmentCounter){
             case 1:
-                rFilename = "lastRoomsTeamStable";
+                rFolder = "roomsTeam";
                 break;
             case 2:
-                rFilename = "lastMazeTeamStable";
+                rFolder = "mazeTeam";
                 break;
             case 3:
-                rFilename = "lastLairTeamStable";
+                rFolder = "lairTeam";
                 break;
             default:
-                rFilename = "lastRoomsTeamStable";
+                rFolder = "roomsTeam";
                 break;
         }
         String wFilename = "lastteamconfig";
         try {
-            File rFile = new File("C:/Users/marco/Documents/Tesi/MRESim/config/"+rFilename+".txt");
+            File rFile = new File("C:/Users/marco/Documents/Tesi/MRESim/config/"+rFolder+"/"+rFilename+".txt");
             File wFile = new File("C:/Users/marco/Documents/Tesi/MRESim/config/"+wFilename+".txt");
             fr = new FileReader(rFile.getAbsoluteFile());
             fw = new FileWriter(wFile.getAbsoluteFile());

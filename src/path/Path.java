@@ -235,7 +235,7 @@ public class Path {
         }
         if (goalNode.getID() == Constants.UNEXPLORED_NODE_ID)
         {
-            System.out.println("Goal point " + endpoint + " in unexplored space!");
+            System.out.println("Goal point " + endpoint + " in unexplored space!!!");
             findNearestExploredNode(agentGrid, areaGrid, endpoint, startpoint, topologicalNodes);
             List<Point> pathToExploredPoints = pathPoints;
             if (pathPoints.size() == 0)
