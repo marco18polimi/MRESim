@@ -98,7 +98,7 @@ public class Constants {
     public static final int INIT_DELAY = 500;
     
     // Replan every ... steps
-    public static final int REPLAN_INTERVAL = 15;
+    public static final int REPLAN_INTERVAL = 10;
     
     // Min time between RV replan
     public static final int RV_REPLAN_INTERVAL = REPLAN_INTERVAL;

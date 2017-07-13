@@ -1,12 +1,16 @@
-package exploration;
+package exploration.thesisControllers;
 
-import agents.ActiveSet;
-import agents.IdleSet;
+import agents.sets.ActiveSet;
+import agents.sets.FollowerSet;
+import agents.sets.IdleSet;
 import agents.RealAgent;
+import agents.sets.LeaderSet;
 import config.Constants;
 import environment.ContourTracer;
 import environment.Environment;
 import environment.Frontier;
+import exploration.RandomWalk;
+import exploration.SimulationFramework;
 import path.Path;
 
 import java.awt.*;
@@ -141,30 +145,39 @@ public class ExplorationController {
     }
 
     public static void setStartingAgent(RealAgent agent,Environment env){
-        ExplorationController.calculateFrontiers(agent,env);
-        PriorityQueue<Frontier> frontiers = agent.getFrontiers();
-        LinkedList<RealAgent> team = IdleSet.getInstance().getPool();
+        if(!ReserveController.getInstance().getStarterSelected()) {
+            ExplorationController.calculateFrontiers(agent, env);
+            PriorityQueue<Frontier> frontiers = agent.getFrontiers();
+            LinkedList<RealAgent> team = IdleSet.getInstance().getPool();
 
-        LinkedList<AgentFrontierPair> pairs = new LinkedList<>();
-        for(Frontier f: frontiers){
-            Point currCenter = f.getCentre();
-            for(RealAgent a: team){
-                Point currLoc = a.getLocation();
-                double currDist = currLoc.distance(currCenter);
-                pairs.add(new AgentFrontierPair(a,f,currDist));
+            LinkedList<AgentFrontierPair> pairs = new LinkedList<>();
+            for (Frontier f : frontiers) {
+                Point currCenter = f.getCentre();
+                for (RealAgent a : team) {
+                    Point currLoc = a.getLocation();
+                    double currDist = currLoc.distance(currCenter);
+                    pairs.add(new AgentFrontierPair(a, f, currDist));
+                }
             }
-        }
 
-        AgentFrontierPair currPair = pairs.get(0);
-        double currMin = currPair.getDistance();
-        for(int i=1;i<pairs.size();i++){
-            if(pairs.get(i).getDistance() < currMin){
-                currMin = pairs.get(i).getDistance();
-                currPair = pairs.get(i);
+            AgentFrontierPair currPair = pairs.get(0);
+            double currMin = currPair.getDistance();
+            for (int i = 1; i < pairs.size(); i++) {
+                if (pairs.get(i).getDistance() < currMin) {
+                    currMin = pairs.get(i).getDistance();
+                    currPair = pairs.get(i);
+                }
             }
-        }
 
-        currPair.getAgent().setStarter(true);
+            if(LeaderSet.getInstance().isLeader(agent)) {
+                currPair.getAgent().setStarter(true);
+            }else if(FollowerSet.getInstance().isFollower(agent)){
+                currPair.getAgent().getBuddy().setStarter(true);
+            }else{
+                currPair.getAgent().setStarter(true);
+            }
+            ReserveController.getInstance().setStarterSelected(true);
+        }
     }
 
     // </editor-fold>

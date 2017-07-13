@@ -42,8 +42,11 @@ package exploration;
 
 import agents.*;
 import agents.BasicAgent.ExploreState;
+import agents.sets.ActiveSet;
+import agents.sets.IdleSet;
 import environment.*;
 import config.*;
+import exploration.thesisControllers.ReserveController;
 import gui.*;
 import communication.*;
 import config.RobotConfig.roletype;
@@ -199,6 +202,36 @@ public class SimulationFramework implements ActionListener {
             for(int j=0; j<numRobots; j++)
                 if(j != i)
                     agent[i].addTeammate(teammate[j].copy());
+
+        //Strategies starting agents operations
+        switch(simConfig.getExpAlgorithm()) {
+            case Reserve:
+                //agent[1].setStarter(true);
+                break;
+            case BuddySystem:
+                //agent[1].setStarter(true);
+                createCouples();
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    private void createCouples(){
+        for(int i=1;i<numRobots;i++){
+            if(i%2 == 0) {
+                agent[i].setFollower(true);
+                agent[i].setBuddy(agent[i-1]);
+            }else {
+                agent[i].setLeader(true);
+                if((i+1) < numRobots){
+                    agent[i].setBuddy(agent[i+1]);
+                }else{
+                    agent[i].setBuddy(agent[i]);
+                }
+            }
+        }
     }
     
 // </editor-fold>     

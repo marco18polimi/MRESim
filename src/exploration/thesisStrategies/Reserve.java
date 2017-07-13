@@ -1,13 +1,12 @@
-package exploration.thesis;
+package exploration.thesisStrategies;
 
 import agents.*;
+import agents.sets.ActiveSet;
+import agents.sets.IdleSet;
 import environment.Environment;
 import environment.Frontier;
-import exploration.ExplorationController;
-import exploration.RandomWalk;
-import exploration.ReserveController;
-import exploration.SimulationFramework;
-import path.Path;
+import exploration.thesisControllers.ExplorationController;
+import exploration.thesisControllers.ReserveController;
 
 import java.awt.*;
 import java.util.LinkedList;

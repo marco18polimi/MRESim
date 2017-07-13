@@ -374,7 +374,7 @@ public class LogDialog extends javax.swing.JDialog {
     private void buttonAgentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAgentsActionPerformed
         JFileChooser fileChooser = new JFileChooser();
         //Usually, log dir default: fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir") + "/logs/"));
-        // But temporarily for thesis:
+        // But temporarily for thesisStrategies:
         fileChooser.setCurrentDirectory(new File(envConfig.getLogAgentFilename()));
         int returnVal = fileChooser.showSaveDialog(this);
 
@@ -388,7 +388,7 @@ public class LogDialog extends javax.swing.JDialog {
     private void buttonDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDataActionPerformed
         JFileChooser fileChooser = new JFileChooser();
        //Usually, log dir default: fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir") + "/logs/"));
-        // But temporarily for thesis:
+        // But temporarily for thesisStrategies:
         fileChooser.setCurrentDirectory(new File(envConfig.getLogDataFilename()));
         int returnVal = fileChooser.showSaveDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -417,7 +417,7 @@ public class LogDialog extends javax.swing.JDialog {
         System.setProperty("apple.awt.fileDialogForDirectories", "true");
         JFileChooser dirChooser = new JFileChooser();
        //Usually, dir default: dirChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
-        // But temporarily for thesis:
+        // But temporarily for thesisStrategies:
         dirChooser.setCurrentDirectory(new File(envConfig.getLogScreenshotsDirname()));
         dirChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         int returnVal = dirChooser.showOpenDialog(this);

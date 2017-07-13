@@ -1,4 +1,6 @@
-package agents;
+package agents.sets;
+
+import agents.RealAgent;
 
 import java.util.LinkedList;
 

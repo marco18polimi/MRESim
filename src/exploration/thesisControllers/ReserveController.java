@@ -1,6 +1,6 @@
-package exploration;
+package exploration.thesisControllers;
 
-import agents.IdleSet;
+import agents.sets.IdleSet;
 import agents.RealAgent;
 import environment.Frontier;
 
@@ -12,11 +12,16 @@ import java.util.concurrent.Semaphore;
  */
 public class ReserveController {
 
+    // <editor-fold defaultstate="collapsed" desc="Variables">
     private static ReserveController rc;
     private static LinkedList<Frontier> callFrontiers;
     private static Semaphore sem;
+    private static boolean starterSelected;
+    // </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="Constructor">
     public ReserveController(){}
+    // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Get instance">
     public static ReserveController getInstance(){
@@ -24,6 +29,7 @@ public class ReserveController {
             rc = new ReserveController();
             callFrontiers = new LinkedList<>();
             sem = new Semaphore(1);
+            starterSelected = false;
         }
         return rc;
     }
@@ -35,27 +41,13 @@ public class ReserveController {
 
     public Semaphore getSem(){ return sem; }
 
+    public boolean getStarterSelected(){ return starterSelected; }
+
     public void setCallFrontiers(LinkedList<Frontier> f){ callFrontiers = f; }
 
     public void setSem(Semaphore s){ sem = s; }
-    // </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="Add and remove methods">
-    public void addCallFrontiers(LinkedList<Frontier> callFronts){
-        for(Frontier f : callFronts) {
-            boolean alreadyIn = false;
-            for(Frontier cf : callFrontiers){
-                if(f.isClose(cf)){
-                    alreadyIn = true;
-                }
-            }
-
-            if(!alreadyIn) {
-                callFrontiers.add(f);
-            }
-        }
-    }
-    // </editor-fold>
+    public void setStarterSelected(boolean ss){ starterSelected = ss; }
 
     public void setAssignedFrontier(Frontier f){
         for(Frontier cf : this.callFrontiers){
@@ -83,6 +75,23 @@ public class ReserveController {
             }
         }
         return assigned;
+    }
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="Add and remove methods">
+    public void addCallFrontiers(LinkedList<Frontier> callFronts){
+        for(Frontier f : callFronts) {
+            boolean alreadyIn = false;
+            for(Frontier cf : callFrontiers){
+                if(f.isClose(cf)){
+                    alreadyIn = true;
+                }
+            }
+
+            if(!alreadyIn) {
+                callFrontiers.add(f);
+            }
+        }
     }
     // </editor-fold>
 
