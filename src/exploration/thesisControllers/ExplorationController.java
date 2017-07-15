@@ -22,6 +22,10 @@ import java.util.PriorityQueue;
  */
 public class ExplorationController {
 
+    // <editor-fold degaultstate="collapsed" desc="Variables">
+    private static boolean starterSelected = false;
+    // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc="Calculate and set agent's frontiers">
 
     public static LinkedList<Frontier> calculateFrontiers(RealAgent agent,Environment env) {
@@ -145,7 +149,7 @@ public class ExplorationController {
     }
 
     public static void setStartingAgent(RealAgent agent,Environment env){
-        if(!ReserveController.getInstance().getStarterSelected()) {
+        if(!starterSelected) {
             ExplorationController.calculateFrontiers(agent, env);
             PriorityQueue<Frontier> frontiers = agent.getFrontiers();
             LinkedList<RealAgent> team = IdleSet.getInstance().getPool();
@@ -176,7 +180,7 @@ public class ExplorationController {
             }else{
                 currPair.getAgent().setStarter(true);
             }
-            ReserveController.getInstance().setStarterSelected(true);
+            starterSelected = true;
         }
     }
 

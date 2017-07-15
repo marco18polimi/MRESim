@@ -148,6 +148,7 @@ public class RealAgent extends BasicAgent implements Agent {
 
     //Added for generic
     private Frontier curFrontier;
+    private int envErrorCounter;
 
     public RealAgent(int envWidth, int envHeight, RobotConfig robot, SimulatorConfig simConfig) {
         super(robot.getRobotNumber(), 
@@ -213,11 +214,17 @@ public class RealAgent extends BasicAgent implements Agent {
         teamPositioning = new LinkedList<Point>();
 
         curFrontier = null;
+        envErrorCounter = 0;
     }
   
 // </editor-fold>
     
 // <editor-fold defaultstate="collapsed" desc="Get and Set">
+
+    public int getEnvErrorCounter() { return envErrorCounter; }
+
+    public void setEnvErrorCounter(int envErrorCounter) { this.envErrorCounter = envErrorCounter; }
+
     public Frontier getCurFrontier(){ return curFrontier; }
 
     public void setCurFrontier(Frontier f){ curFrontier = f; }

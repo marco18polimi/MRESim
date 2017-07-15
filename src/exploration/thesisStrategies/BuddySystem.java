@@ -19,6 +19,7 @@ import java.util.LinkedList;
  */
 @SuppressWarnings("Duplicates")
 public class BuddySystem {
+
     // <editor-fold defaultstate="collapsed" desc="TakeStep">
     /**
      * Handles timing and agents' roles during exploration
@@ -60,15 +61,6 @@ public class BuddySystem {
                 ReserveController.getInstance().getSem().release();
             }
 
-            SimulationFramework.log(agent.getName()+" is leader? "+LeaderSet.getInstance().isLeader(agent),"personalConsole");
-            if(agent.getBuddy() != null) {
-                SimulationFramework.log("[" + agent.getName() + "] is buddy of: " + agent.getBuddy().getName() +
-                        " which is starting? " + agent.getBuddy().getStarter(), "personalConsole");
-            }else{
-                SimulationFramework.log("[" + agent.getName() + "] is buddy of NOBODY" +
-                        " and is starting? " + agent.getStarter(), "personalConsole");
-            }
-
             if(agent.getStarter() || agent.getBuddy().getStarter()){
                 Point goal = rePlan(agent,env);
                 idleSet.removePoolAgent(agent);
@@ -81,6 +73,9 @@ public class BuddySystem {
         // <editor-fold defaultstate="collapsed" desc="TIME > 1: move remaining agents">
         else if(agent.getTimeElapsed() > 1) {
             if(activeSet.isActive(agent)) {
+                if(agent.getFirstCall()){
+                    agent.setFirstCall(false);
+                }
                 Point goal = rePlan(agent,env);
                 nextStep = goal;
             }else{
@@ -141,27 +136,32 @@ public class BuddySystem {
         agent.getStats().setTimeSinceLastPlan(0);
         Point activationGoal = null;
 
-        try{
-            ReserveController.getInstance().getSem().acquire();
-            LinkedList<Frontier> freeCall = ReserveController.getInstance().getNotAssignedFrontiers();
+        if(LeaderSet.getInstance().isLeader(agent)) {
+            try {
+                ReserveController.getInstance().getSem().acquire();
+                LinkedList<Frontier> freeCall = ReserveController.getInstance().getNotAssignedFrontiers();
 
-            if(!freeCall.isEmpty()){
-                Frontier f = ReserveController.getInstance().chooseBestReservePair(agent,freeCall);
-                f = null;
-                if(f!=null){
-                    agent.setFirstCall(true);
-                    ReserveController.getInstance().setAssignedFrontier(f);
+                if (!freeCall.isEmpty()) {
+                    Frontier f = ReserveController.getInstance().chooseBestReservePair(agent, freeCall);
+                    if (f != null) {
+                        agent.setFirstCall(true);
+                        agent.getBuddy().setFirstCall(true);
+                        ReserveController.getInstance().setAssignedFrontier(f);
 
-                    IdleSet.getInstance().removePoolAgent(agent);
-                    ActiveSet.getInstance().addActiveAgent(agent);
+                        IdleSet.getInstance().removePoolAgent(agent);
+                        IdleSet.getInstance().removePoolAgent(agent.getBuddy());
+                        ActiveSet.getInstance().addActiveAgent(agent);
+                        ActiveSet.getInstance().addActiveAgent(agent.getBuddy());
 
-                    activationGoal = ExplorationController.moveAgent(agent,f);
+                        activationGoal = ExplorationController.moveAgent(agent, f);
+                        agent.setCurFrontier(f);
+                    }
                 }
+            } catch (InterruptedException e) {
+                //Do something
+            } finally {
+                ReserveController.getInstance().getSem().release();
             }
-        }catch(InterruptedException e){
-            //Do something
-        }finally{
-            ReserveController.getInstance().getSem().release();
         }
 
         return activationGoal;
@@ -207,6 +207,10 @@ public class BuddySystem {
         }
 
         //Call reserve agents
+        /*
+        BUT BEFORE CALL FOLLOWER AGENT ON THE SECOND CLOSER FRONTIER
+        AND HANDLE RESERVE CALLS WITHOUT SECOND CLOSER FRONTIER
+         */
         frontiers.remove(closer);
         ReserveController.getInstance().addCallFrontiers(frontiers);
 
@@ -238,6 +242,10 @@ public class BuddySystem {
 
     // <editor-fold defaultstate="collapsed" desc="PHI: splitting function">
     private static Point splittingFunction(RealAgent agent){
+        /*
+        CHECK FOLLOWER FRONTIERS AND, IF THERE IS ONE, TAKE IT AS NEW GOAL
+        ,HANDLING SPLITTING PROCEDURES
+         */
         return null;
     }
     // </editor-fold>

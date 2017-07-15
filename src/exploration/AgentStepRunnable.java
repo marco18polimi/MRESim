@@ -96,9 +96,15 @@ public class AgentStepRunnable implements Runnable{
             if(simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("Reserve") || simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("BuddySystem")) {
                 // <editor-fold defaultstate="collapsed" desc="Check environment error">
                 if (agent.getEnvError()) {
-                    SimulationFramework.log("Env error", "errConsole");
+                    SimulationFramework.log("["+agent.getName()+"] Env error", "errConsole");
                     nextStep = RandomWalk.takeStep(agent);
-                    agent.setEnvError(false);
+                    if(agent.getEnvErrorCounter() < Constants.ENV_ERROR_COUNTER_MAX) {
+                        agent.setEnvErrorCounter(agent.getEnvErrorCounter()+1);
+                        agent.setEnvError(true);
+                    }else{
+                        agent.setEnvError(false);
+                        agent.setEnvErrorCounter(0);
+                    }
                 }
                 // </editor-fold>
 

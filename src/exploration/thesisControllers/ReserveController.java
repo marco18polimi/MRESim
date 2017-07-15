@@ -3,6 +3,7 @@ package exploration.thesisControllers;
 import agents.sets.IdleSet;
 import agents.RealAgent;
 import environment.Frontier;
+import exploration.SimulationFramework;
 
 import java.util.LinkedList;
 import java.util.concurrent.Semaphore;
@@ -16,7 +17,6 @@ public class ReserveController {
     private static ReserveController rc;
     private static LinkedList<Frontier> callFrontiers;
     private static Semaphore sem;
-    private static boolean starterSelected;
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Constructor">
@@ -29,7 +29,6 @@ public class ReserveController {
             rc = new ReserveController();
             callFrontiers = new LinkedList<>();
             sem = new Semaphore(1);
-            starterSelected = false;
         }
         return rc;
     }
@@ -41,13 +40,9 @@ public class ReserveController {
 
     public Semaphore getSem(){ return sem; }
 
-    public boolean getStarterSelected(){ return starterSelected; }
-
     public void setCallFrontiers(LinkedList<Frontier> f){ callFrontiers = f; }
 
     public void setSem(Semaphore s){ sem = s; }
-
-    public void setStarterSelected(boolean ss){ starterSelected = ss; }
 
     public void setAssignedFrontier(Frontier f){
         for(Frontier cf : this.callFrontiers){
@@ -89,6 +84,7 @@ public class ReserveController {
             }
 
             if(!alreadyIn) {
+                SimulationFramework.log("Frontier "+f.getCentre()+" needs help","personalConsole");
                 callFrontiers.add(f);
             }
         }

@@ -5,6 +5,7 @@ import agents.sets.ActiveSet;
 import agents.sets.IdleSet;
 import environment.Environment;
 import environment.Frontier;
+import exploration.SimulationFramework;
 import exploration.thesisControllers.ExplorationController;
 import exploration.thesisControllers.ReserveController;
 
@@ -42,6 +43,7 @@ public class Reserve {
         else if (agent.getTimeElapsed() == 1){
             ExplorationController.setStartingAgent(agent,env);
             if(agent.getStarter()){
+                SimulationFramework.log("["+agent.getName()+"] starting","personalConsole");
                 Point goal = rePlan(agent,env);
 
                 idleSet.removePoolAgent(agent);
