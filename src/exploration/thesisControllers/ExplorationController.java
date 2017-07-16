@@ -122,7 +122,7 @@ public class ExplorationController {
 
     // <editor-fold defaultstate="collapsed" desc="Set starting agent">
 
-    private static class AgentFrontierPair {
+    public static class AgentFrontierPair {
 
         private RealAgent agent;
         private Frontier frontier;

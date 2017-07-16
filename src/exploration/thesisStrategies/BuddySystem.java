@@ -7,9 +7,8 @@ import agents.sets.IdleSet;
 import agents.sets.LeaderSet;
 import environment.Environment;
 import environment.Frontier;
-import exploration.SimulationFramework;
+import exploration.thesisControllers.BuddyController;
 import exploration.thesisControllers.ExplorationController;
-import exploration.thesisControllers.ReserveController;
 
 import java.awt.*;
 import java.util.LinkedList;
@@ -53,12 +52,12 @@ public class BuddySystem {
         // <editor-fold defaultstate="collapsed" desc="TIME = 1 move starting agents">
         else if (agent.getTimeElapsed() == 1){
             try{
-                ReserveController.getInstance().getSem().acquire();
+                BuddyController.getInstance().getSem().acquire();
                 ExplorationController.setStartingAgent(agent, env);
             }catch(InterruptedException ie){
                 ie.printStackTrace();
             }finally {
-                ReserveController.getInstance().getSem().release();
+                BuddyController.getInstance().getSem().release();
             }
 
             if(agent.getStarter() || agent.getBuddy().getStarter()){
@@ -138,15 +137,15 @@ public class BuddySystem {
 
         if(LeaderSet.getInstance().isLeader(agent)) {
             try {
-                ReserveController.getInstance().getSem().acquire();
-                LinkedList<Frontier> freeCall = ReserveController.getInstance().getNotAssignedFrontiers();
+                BuddyController.getInstance().getSem().acquire();
+                LinkedList<Frontier> freeCall = BuddyController.getInstance().getNotAssignedFrontiers();
 
                 if (!freeCall.isEmpty()) {
-                    Frontier f = ReserveController.getInstance().chooseBestReservePair(agent, freeCall);
+                    Frontier f = BuddyController.getInstance().chooseBestReservePair(agent, freeCall);
                     if (f != null) {
                         agent.setFirstCall(true);
                         agent.getBuddy().setFirstCall(true);
-                        ReserveController.getInstance().setAssignedFrontier(f);
+                        BuddyController.getInstance().setAssignedFrontier(f);
 
                         IdleSet.getInstance().removePoolAgent(agent);
                         IdleSet.getInstance().removePoolAgent(agent.getBuddy());
@@ -160,7 +159,7 @@ public class BuddySystem {
             } catch (InterruptedException e) {
                 //Do something
             } finally {
-                ReserveController.getInstance().getSem().release();
+                BuddyController.getInstance().getSem().release();
             }
         }
 
@@ -212,7 +211,7 @@ public class BuddySystem {
         AND HANDLE RESERVE CALLS WITHOUT SECOND CLOSER FRONTIER
          */
         frontiers.remove(closer);
-        ReserveController.getInstance().addCallFrontiers(frontiers);
+        BuddyController.getInstance().addCallFrontiers(frontiers);
 
         //Move agent
         Point goal = ExplorationController.moveAgent(agent,closer);
