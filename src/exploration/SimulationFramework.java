@@ -46,6 +46,8 @@ import agents.sets.ActiveSet;
 import agents.sets.IdleSet;
 import environment.*;
 import config.*;
+import exploration.thesisControllers.BuddyController;
+import exploration.thesisControllers.ExplorationController;
 import exploration.thesisControllers.ReserveController;
 import gui.*;
 import communication.*;
@@ -171,9 +173,12 @@ public class SimulationFramework implements ActionListener {
 
     private void clearAll(){
         if(simConfig.getExpAlgorithm() == exptype.Reserve){
-            //IdleSet.getInstance().getPool().clear();
-            //ActiveSet.getInstance().getActive().clear();
             ReserveController.getInstance().getCallFrontiers().clear();
+            ExplorationController.starterSelected = false;
+        }else if(simConfig.getExpAlgorithm() == exptype.BuddySystem){
+            BuddyController.getInstance().getCallFrontiers().clear();
+            BuddyController.getInstance().getFollowerFrontiers().clear();
+            ExplorationController.starterSelected = false;
         }
     }
             
@@ -206,10 +211,8 @@ public class SimulationFramework implements ActionListener {
         //Strategies starting agents operations
         switch(simConfig.getExpAlgorithm()) {
             case Reserve:
-                //agent[1].setStarter(true);
                 break;
             case BuddySystem:
-                //agent[1].setStarter(true);
                 createCouples();
                 break;
             default:
@@ -504,7 +507,8 @@ public class SimulationFramework implements ActionListener {
     public void start() {
         runNumber = 0;
         //Check if we are running batch
-        if (simConfig.getExpAlgorithm() == exptype.PureExploration || simConfig.getExpAlgorithm() == exptype.Reserve) {
+        if (simConfig.getExpAlgorithm() == exptype.PureExploration || simConfig.getExpAlgorithm() == exptype.Reserve
+                || simConfig.getExpAlgorithm() == exptype.BuddySystem) {
             isBatch = true;
         } else isBatch = false;
         

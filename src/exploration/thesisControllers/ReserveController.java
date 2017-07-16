@@ -11,6 +11,7 @@ import java.util.concurrent.Semaphore;
 /**
  * Created by marco on 07/06/2017.
  */
+@SuppressWarnings("Duplicates")
 public class ReserveController {
 
     // <editor-fold defaultstate="collapsed" desc="Variables">

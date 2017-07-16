@@ -16,7 +16,7 @@ public class BuddyController {
     // <editor-fold defaultstate="collapsed" desc="Variables">
     private static BuddyController bc;
     private static LinkedList<Frontier> callFrontiers;
-    private static LinkedList<ExplorationController.AgentFrontierPair> followerFroniers;
+    private static LinkedList<ExplorationController.AgentFrontierPair> followerFrontiers;
     private static Semaphore sem;
     // </editor-fold>
 
@@ -29,7 +29,7 @@ public class BuddyController {
         if(bc == null){
             bc = new BuddyController();
             callFrontiers = new LinkedList<>();
-            followerFroniers = new LinkedList<>();
+            followerFrontiers = new LinkedList<>();
             sem = new Semaphore(1);
         }
         return bc;
@@ -39,12 +39,12 @@ public class BuddyController {
     // <editor-fold defaultstate="collapsed" desc="Getters and setters">
 
 
-    public static LinkedList<ExplorationController.AgentFrontierPair> getFollowerFroniers() {
-        return followerFroniers;
+    public static LinkedList<ExplorationController.AgentFrontierPair> getFollowerFrontiers() {
+        return followerFrontiers;
     }
 
-    public static void setFollowerFroniers(LinkedList<ExplorationController.AgentFrontierPair> followerFroniers) {
-        BuddyController.followerFroniers = followerFroniers;
+    public static void setFollowerFrontiers(LinkedList<ExplorationController.AgentFrontierPair> followerFrontiers) {
+        BuddyController.followerFrontiers = followerFrontiers;
     }
 
     public LinkedList<Frontier> getCallFrontiers(){ return callFrontiers; }

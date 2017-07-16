@@ -23,7 +23,7 @@ import java.util.PriorityQueue;
 public class ExplorationController {
 
     // <editor-fold degaultstate="collapsed" desc="Variables">
-    private static boolean starterSelected = false;
+    public static boolean starterSelected = false;
     // </editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Calculate and set agent's frontiers">
