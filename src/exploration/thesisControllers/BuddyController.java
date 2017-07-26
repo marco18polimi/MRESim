@@ -1,10 +1,13 @@
 package exploration.thesisControllers;
 
 import agents.RealAgent;
+import agents.sets.FollowerSet;
 import agents.sets.IdleSet;
+import agents.sets.LeaderSet;
 import environment.Frontier;
 import exploration.SimulationFramework;
 
+import java.awt.*;
 import java.util.LinkedList;
 import java.util.concurrent.Semaphore;
 
@@ -37,8 +40,6 @@ public class BuddyController {
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Getters and setters">
-
-
     public static LinkedList<ExplorationController.AgentFrontierPair> getFollowerFrontiers() {
         return followerFrontiers;
     }
@@ -82,6 +83,15 @@ public class BuddyController {
         }
         return assigned;
     }
+
+    public Frontier getFollowerFrontier(RealAgent follower){
+        for(ExplorationController.AgentFrontierPair pair : followerFrontiers){
+            if(pair.getAgent().getID() == follower.getID()){
+                return pair.getFrontier();
+            }
+        }
+        return null;
+    }
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Add and remove methods">
@@ -95,14 +105,19 @@ public class BuddyController {
             }
 
             if(!alreadyIn) {
-                SimulationFramework.log("Frontier "+f.getCentre()+" needs help","personalConsole");
                 callFrontiers.add(f);
             }
         }
     }
+
+    public void addFolowerFrontier(Frontier splitFront,RealAgent follower){
+        double distance = splitFront.getCentre().distance(follower.getLocation());
+        ExplorationController.AgentFrontierPair pair = new ExplorationController.AgentFrontierPair(follower,splitFront,distance);
+        followerFrontiers.add(pair);
+    }
     // </editor-fold>
 
-    // <editor-fold defaultstate="collapsed" desc="Add and remove methods">
+    // <editor-fold defaultstate="collapsed" desc="Utils">
     public static Frontier chooseBestReservePair(RealAgent agent, LinkedList<Frontier> call){
         LinkedList<Frontier> candidates = filterCandidateFrontiers(agent,call);
         if(candidates.isEmpty()){
@@ -141,6 +156,30 @@ public class BuddyController {
             }
         }
         return candidates;
+    }
+
+    public static Frontier checkSplit(LinkedList<Frontier> frontiers,Frontier selected,RealAgent leader){
+        Point pos = leader.getLocation();
+        double min = 1000000000;
+        Frontier closer = null;
+        for(Frontier f: frontiers){
+            if(pos.distance(f.getCentre()) < min && !f.isClose(selected)){
+                closer = f;
+                min = pos.distance(f.getCentre());
+            }
+        }
+        return closer;
+    }
+
+    public static void handleSplit(RealAgent follower){
+        //Update leader and follower sets
+        LeaderSet.getInstance().addLeader(follower);
+        FollowerSet.getInstance().removeFollower(follower);
+
+        //Update buddy couple
+        RealAgent leader = follower.getBuddy();
+        leader.setBuddy(leader);
+        follower.setBuddy(follower);
     }
     // </editor-fold>
 }

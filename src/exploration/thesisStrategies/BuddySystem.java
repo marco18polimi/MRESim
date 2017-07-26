@@ -205,12 +205,18 @@ public class BuddySystem {
             }
         }
 
-        //Call reserve agents
-        /*
-        BUT BEFORE CALL FOLLOWER AGENT ON THE SECOND CLOSER FRONTIER
-        AND HANDLE RESERVE CALLS WITHOUT SECOND CLOSER FRONTIER
-         */
+        //Remove closer frontier
         frontiers.remove(closer);
+
+        //Calculate second closer frontier
+        Frontier splitFront = BuddyController.getInstance().checkSplit(frontiers,closer,agent);
+
+        //Call buddy
+        if(splitFront != null) {
+            BuddyController.getInstance().addFolowerFrontier(splitFront, agent.getBuddy());
+        }
+
+        //Call reserve couples
         BuddyController.getInstance().addCallFrontiers(frontiers);
 
         //Move agent
@@ -243,8 +249,15 @@ public class BuddySystem {
     private static Point splittingFunction(RealAgent agent){
         /*
         CHECK FOLLOWER FRONTIERS AND, IF THERE IS ONE, TAKE IT AS NEW GOAL
-        ,HANDLING SPLITTING PROCEDURES
+        HANDLING SPLITTING PROCEDURES (Changing set,set itself as buddy for both leader and follower)
          */
+        Frontier splitFront = BuddyController.getInstance().getFollowerFrontier(agent);
+        if(splitFront != null){
+            Point goal = ExplorationController.moveAgent(agent,splitFront);
+            agent.setCurFrontier(splitFront);
+            BuddyController.handleSplit(agent);
+            return goal;
+        }
         return null;
     }
     // </editor-fold>

@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1af4ec83-2cb6-438c-a042-35fb095a1534" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/SimulationFramework.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisControllers/BuddyController.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisControllers/BuddyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisStrategies/BuddySystem.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisStrategies/BuddySystem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastEnvironment.png" afterPath="$PROJECT_DIR$/config/lastEnvironment.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" afterPath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastteamconfig.txt" afterPath="$PROJECT_DIR$/config/lastteamconfig.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/errConsole.txt" afterPath="$PROJECT_DIR$/logs/errConsole.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/personalConsole.txt" afterPath="$PROJECT_DIR$/logs/personalConsole.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Constants.java" afterPath="$PROJECT_DIR$/src/config/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" afterPath="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesisControllers/BuddyController.java" afterPath="$PROJECT_DIR$/src/exploration/thesisControllers/BuddyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesisControllers/ExplorationController.java" afterPath="$PROJECT_DIR$/src/exploration/thesisControllers/ExplorationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesisControllers/ReserveController.java" afterPath="$PROJECT_DIR$/src/exploration/thesisControllers/ReserveController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java" afterPath="$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/MainGUI.java" afterPath="$PROJECT_DIR$/src/gui/MainGUI.java" />
     </list>
     <ignored path="MRESim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,121 +32,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Reserve.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exploration/thesisStrategies/Reserve.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="129" column="26" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#802#876#0" expanded="false" />
-                <element signature="e#1016#1100#0" expanded="false" />
-                <element signature="e#1228#1306#0" expanded="false" />
-                <element signature="e#2695#2751#0" expanded="false" />
-                <element signature="e#4650#4736#0" expanded="false" />
-                <element signature="e#6309#6310#0" expanded="false" />
-                <element signature="e#6351#6352#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BuddySystem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+            <state relative-caret-position="413">
+              <caret line="257" column="45" selection-start-line="257" selection-start-column="45" selection-end-line="257" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3211#3267#0" expanded="true" />
                 <element signature="e#5960#6046#0" expanded="true" />
-                <element signature="n#!!doc;n#splittingFunction#0;n#BuddySystem#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
+      <file leaf-file-name="MainGUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
-              <folding>
-                <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="true" />
-                <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="true" />
-                <element signature="e#2427#2501#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="398" column="24" selection-start-line="398" selection-start-column="24" selection-end-line="398" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuddyController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BuddyController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/exploration/thesisControllers/BuddyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="105" column="92" selection-start-line="105" selection-start-column="92" selection-end-line="105" selection-end-column="92" />
+            <state relative-caret-position="325">
+              <caret line="176" column="59" selection-start-line="176" selection-start-column="59" selection-end-line="176" selection-end-column="59" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#275#306#0" expanded="true" />
                 <element signature="n#!!doc;n#bc#0;n#BuddyController#0" expanded="true" />
                 <element signature="n#!!doc;n#getInstance#0;n#BuddyController#0" expanded="true" />
-                <element signature="e#1150#1218#0" expanded="true" />
-                <element signature="n#!!doc;n#addCallFrontiers#0;n#BuddyController#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RobotTeamConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/RobotTeamConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-              <folding>
-                <element signature="e#1964#2038#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReserveController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exploration/thesisControllers/ReserveController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
-              <folding>
-                <element signature="e#275#306#0" expanded="true" />
-                <element signature="n#!!doc;n#rc#0;n#ReserveController#0" expanded="true" />
-                <element signature="n#!!doc;n#ReserveController#0;n#ReserveController#0" expanded="true" />
-                <element signature="n#!!doc;n#getInstance#0;n#ReserveController#0" expanded="true" />
-                <element signature="e#1007#1075#0" expanded="true" />
-                <element signature="n#!!doc;n#addCallFrontiers#0;n#ReserveController#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimulationFramework.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/exploration/SimulationFramework.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="180" column="58" selection-start-line="180" selection-start-column="58" selection-end-line="180" selection-end-column="58" />
-              <folding>
-                <element signature="e#14800#14868#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AgentStepRunnable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exploration/AgentStepRunnable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="101" column="77" selection-start-line="101" selection-start-column="77" selection-end-line="101" selection-end-column="77" />
-              <folding>
-                <element signature="e#4481#4575#0" expanded="true" />
-                <element signature="e#5036#5135#0" expanded="true" />
-                <element signature="e#5904#5984#0" expanded="true" />
+                <element signature="n#!!doc;n#getFollowerFrontiers#0;n#BuddyController#0" expanded="true" />
+                <element signature="method#setAssignedFrontier#0;class#BuddyController#0" expanded="false" />
+                <element signature="method#getNotAssignedFrontiers#0;class#BuddyController#0" expanded="false" />
+                <element signature="method#getAssignedFrontiers#0;class#BuddyController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -161,25 +76,10 @@
       <file leaf-file-name="ExplorationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/exploration/thesisControllers/ExplorationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="362">
+              <caret line="162" column="34" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
               <folding>
                 <element signature="method#calculateFrontiers#0;class#ExplorationController#0" expanded="false" />
-                <element signature="e#3766#3833#0" expanded="true" />
-                <element signature="e#6265#6332#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RealAgent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/agents/RealAgent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5318">
-              <caret line="211" column="21" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
-              <folding>
-                <element signature="e#7261#7321#0" expanded="true" />
-                <element signature="e#16286#16363#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/exploration/thesis/PureExploration.java" />
         <option value="$PROJECT_DIR$/src/environment/Frontier.java" />
         <option value="$PROJECT_DIR$/src/exploration/ReserveController.java" />
-        <option value="$PROJECT_DIR$/src/gui/MainGUI.java" />
         <option value="$PROJECT_DIR$/src/exploration/thesis/Reserve.java" />
         <option value="$PROJECT_DIR$/src/path/Path.java" />
         <option value="$PROJECT_DIR$/src/config/SimulatorConfig.java" />
@@ -231,12 +130,13 @@
         <option value="$PROJECT_DIR$/src/agents/RealAgent.java" />
         <option value="$PROJECT_DIR$/src/exploration/AgentStepRunnable.java" />
         <option value="$PROJECT_DIR$/src/exploration/thesisStrategies/Reserve.java" />
-        <option value="$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java" />
-        <option value="$PROJECT_DIR$/src/exploration/thesisControllers/BuddyController.java" />
         <option value="$PROJECT_DIR$/src/config/Constants.java" />
         <option value="$PROJECT_DIR$/src/exploration/thesisControllers/ReserveController.java" />
         <option value="$PROJECT_DIR$/src/exploration/thesisControllers/ExplorationController.java" />
         <option value="$PROJECT_DIR$/src/exploration/SimulationFramework.java" />
+        <option value="$PROJECT_DIR$/src/gui/MainGUI.java" />
+        <option value="$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java" />
+        <option value="$PROJECT_DIR$/src/exploration/thesisControllers/BuddyController.java" />
       </list>
     </option>
   </component>
@@ -247,9 +147,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1378" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -276,9 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -423,6 +321,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="exploration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rendezvous" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MRESim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MRESim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="environment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -442,6 +362,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MRESim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MRESim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="communication" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -487,6 +425,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -984,15 +925,16 @@
       <workItem from="1499281265770" duration="804000" />
       <workItem from="1499898014011" duration="7197000" />
       <workItem from="1500057303910" duration="5341000" />
-      <workItem from="1500139662822" duration="3758000" />
+      <workItem from="1500139662822" duration="4394000" />
+      <workItem from="1501107173413" duration="4488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61049000" />
+    <option name="totallyTimeSpent" value="66173000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1002,14 +944,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1241,13 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="400" column="29" selection-start-line="400" selection-start-column="29" selection-end-line="400" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/environment/TopologicalMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -1307,18 +1242,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exploration/thesisStrategies/Reserve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="612">
           <caret line="129" column="26" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#802#876#0" expanded="false" />
-            <element signature="e#1016#1100#0" expanded="false" />
-            <element signature="e#1228#1306#0" expanded="false" />
-            <element signature="e#2695#2751#0" expanded="false" />
-            <element signature="e#4650#4736#0" expanded="false" />
-            <element signature="e#6309#6310#0" expanded="false" />
-            <element signature="e#6351#6352#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,7 +1263,7 @@
         <state relative-caret-position="153">
           <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding>
-            <element signature="e#1964#2038#0" expanded="true" />
+            <element signature="e#1964#2038#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1358,38 +1284,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3211#3267#0" expanded="true" />
-            <element signature="e#5960#6046#0" expanded="true" />
-            <element signature="n#!!doc;n#splittingFunction#0;n#BuddySystem#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/agents/RealAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5318">
-          <caret line="211" column="21" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
-          <folding>
-            <element signature="e#7261#7321#0" expanded="true" />
-            <element signature="e#16286#16363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
+        <state relative-caret-position="255">
           <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
           <folding>
-            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="true" />
-            <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="true" />
-            <element signature="e#2427#2501#0" expanded="true" />
+            <element signature="n#!!doc;n#BATCH_RUNS#0;n#Constants#0" expanded="false" />
+            <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="false" />
+            <element signature="e#2427#2501#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/thesisControllers/ReserveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc;n#rc#0;n#ReserveController#0" expanded="false" />
+            <element signature="n#!!doc;n#ReserveController#0;n#ReserveController#0" expanded="false" />
+            <element signature="n#!!doc;n#getInstance#0;n#ReserveController#0" expanded="false" />
+            <element signature="e#1007#1075#0" expanded="false" />
+            <element signature="n#!!doc;n#addCallFrontiers#0;n#ReserveController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/SimulationFramework.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="558" column="35" selection-start-line="558" selection-start-column="35" selection-end-line="558" selection-end-column="35" />
+          <folding>
+            <element signature="e#2826#2907#0" expanded="false" />
+            <element signature="e#8828#8893#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1399,61 +1326,65 @@
         <state relative-caret-position="331">
           <caret line="101" column="77" selection-start-line="101" selection-start-column="77" selection-end-line="101" selection-end-column="77" />
           <folding>
-            <element signature="e#4481#4575#0" expanded="true" />
-            <element signature="e#5036#5135#0" expanded="true" />
-            <element signature="e#5904#5984#0" expanded="true" />
+            <element signature="e#4481#4575#0" expanded="false" />
+            <element signature="e#5036#5135#0" expanded="false" />
+            <element signature="e#5904#5984#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/agents/RealAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="211" column="21" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
+          <folding>
+            <element signature="e#7261#7321#0" expanded="false" />
+            <element signature="e#16286#16363#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/MainGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="398" column="24" selection-start-line="398" selection-start-column="24" selection-end-line="398" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/thesisControllers/ExplorationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="162" column="34" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
+          <folding>
+            <element signature="method#calculateFrontiers#0;class#ExplorationController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="257" column="45" selection-start-line="257" selection-start-column="45" selection-end-line="257" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3211#3267#0" expanded="true" />
+            <element signature="e#5960#6046#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exploration/thesisControllers/BuddyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="105" column="92" selection-start-line="105" selection-start-column="92" selection-end-line="105" selection-end-column="92" />
+        <state relative-caret-position="325">
+          <caret line="176" column="59" selection-start-line="176" selection-start-column="59" selection-end-line="176" selection-end-column="59" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#275#306#0" expanded="true" />
             <element signature="n#!!doc;n#bc#0;n#BuddyController#0" expanded="true" />
             <element signature="n#!!doc;n#getInstance#0;n#BuddyController#0" expanded="true" />
-            <element signature="e#1150#1218#0" expanded="true" />
-            <element signature="n#!!doc;n#addCallFrontiers#0;n#BuddyController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/thesisControllers/ReserveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
-          <folding>
-            <element signature="e#275#306#0" expanded="true" />
-            <element signature="n#!!doc;n#rc#0;n#ReserveController#0" expanded="true" />
-            <element signature="n#!!doc;n#ReserveController#0;n#ReserveController#0" expanded="true" />
-            <element signature="n#!!doc;n#getInstance#0;n#ReserveController#0" expanded="true" />
-            <element signature="e#1007#1075#0" expanded="true" />
-            <element signature="n#!!doc;n#addCallFrontiers#0;n#ReserveController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/thesisControllers/ExplorationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding>
-            <element signature="method#calculateFrontiers#0;class#ExplorationController#0" expanded="false" />
-            <element signature="e#3766#3833#0" expanded="true" />
-            <element signature="e#6265#6332#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exploration/SimulationFramework.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="180" column="58" selection-start-line="180" selection-start-column="58" selection-end-line="180" selection-end-column="58" />
-          <folding>
-            <element signature="e#14800#14868#0" expanded="true" />
+            <element signature="n#!!doc;n#getFollowerFrontiers#0;n#BuddyController#0" expanded="true" />
+            <element signature="method#setAssignedFrontier#0;class#BuddyController#0" expanded="false" />
+            <element signature="method#getNotAssignedFrontiers#0;class#BuddyController#0" expanded="false" />
+            <element signature="method#getAssignedFrontiers#0;class#BuddyController#0" expanded="false" />
           </folding>
         </state>
       </provider>

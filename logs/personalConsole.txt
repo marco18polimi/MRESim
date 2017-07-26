@@ -1,43 +1,57 @@
-Frontier java.awt.Point[x=468,y=230] needs help
-Frontier java.awt.Point[x=525,y=383] needs help
-Frontier java.awt.Point[x=367,y=313] needs help
-Frontier java.awt.Point[x=652,y=292] needs help
-Frontier java.awt.Point[x=661,y=443] needs help
-Frontier java.awt.Point[x=218,y=301] needs help
-Frontier java.awt.Point[x=84,y=314] needs help
-Frontier java.awt.Point[x=161,y=425] needs help
-Frontier java.awt.Point[x=468,y=230] needs help
-Frontier java.awt.Point[x=525,y=383] needs help
-Frontier java.awt.Point[x=468,y=230] needs help
-Frontier java.awt.Point[x=525,y=383] needs help
-Frontier java.awt.Point[x=367,y=313] needs help
-Frontier java.awt.Point[x=652,y=292] needs help
-Frontier java.awt.Point[x=660,y=443] needs help
-Frontier java.awt.Point[x=218,y=301] needs help
-Frontier java.awt.Point[x=88,y=310] needs help
-Frontier java.awt.Point[x=161,y=425] needs help
-1          7            158          1068          95          1492,2
-[D] starting
-Frontier java.awt.Point[x=468,y=230] needs help
-Frontier java.awt.Point[x=558,y=360] needs help
-Frontier java.awt.Point[x=230,y=307] needs help
-Frontier java.awt.Point[x=681,y=297] needs help
-Frontier java.awt.Point[x=414,y=376] needs help
-Frontier java.awt.Point[x=662,y=443] needs help
-Frontier java.awt.Point[x=79,y=294] needs help
-Frontier java.awt.Point[x=161,y=425] needs help
-1          7            150          933          95,4          1233,4
-[E] starting
-Frontier java.awt.Point[x=556,y=240] needs help
-Frontier java.awt.Point[x=415,y=301] needs help
-Frontier java.awt.Point[x=522,y=376] needs help
-Frontier java.awt.Point[x=259,y=301] needs help
-Frontier java.awt.Point[x=693,y=293] needs help
-Frontier java.awt.Point[x=662,y=443] needs help
-Frontier java.awt.Point[x=353,y=425] needs help
-Frontier java.awt.Point[x=134,y=318] needs help
-Frontier java.awt.Point[x=216,y=427] needs help
-1          8            119          1151          95          985,5
-[E] starting
-Frontier java.awt.Point[x=468,y=230] needs help
-Frontier java.awt.Point[x=549,y=329] needs help
+1          2            500          100          6          0
+Frontier java.awt.Point[x=444,y=278] needs help
+Frontier java.awt.Point[x=567,y=240] needs help
+Frontier java.awt.Point[x=559,y=375] needs help
+Frontier java.awt.Point[x=442,y=441] needs help
+Frontier java.awt.Point[x=682,y=295] needs help
+Frontier java.awt.Point[x=333,y=350] needs help
+Frontier java.awt.Point[x=262,y=243] needs help
+Frontier java.awt.Point[x=157,y=319] needs help
+Frontier java.awt.Point[x=600,y=346] needs help
+Frontier java.awt.Point[x=658,y=180] needs help
+Frontier java.awt.Point[x=158,y=111] needs help
+Frontier java.awt.Point[x=330,y=128] needs help
+Frontier java.awt.Point[x=158,y=111] needs help
+Frontier java.awt.Point[x=330,y=128] needs help
+Frontier java.awt.Point[x=475,y=188] needs help
+Frontier java.awt.Point[x=330,y=308] needs help
+Frontier java.awt.Point[x=574,y=282] needs help
+Frontier java.awt.Point[x=627,y=450] needs help
+Frontier java.awt.Point[x=158,y=111] needs help
+Frontier java.awt.Point[x=344,y=119] needs help
+Frontier java.awt.Point[x=480,y=116] needs help
+Frontier java.awt.Point[x=333,y=278] needs help
+Frontier java.awt.Point[x=582,y=327] needs help
+Frontier java.awt.Point[x=627,y=451] needs help
+Frontier java.awt.Point[x=659,y=222] needs help
+Frontier java.awt.Point[x=158,y=111] needs help
+Frontier java.awt.Point[x=330,y=128] needs help
+Frontier java.awt.Point[x=475,y=188] needs help
+Frontier java.awt.Point[x=330,y=308] needs help
+Frontier java.awt.Point[x=574,y=282] needs help
+Frontier java.awt.Point[x=627,y=450] needs help
+Frontier java.awt.Point[x=186,y=393] needs help
+2          2            246          406          95,3          2428,5
+Frontier java.awt.Point[x=156,y=111] needs help
+Frontier java.awt.Point[x=348,y=122] needs help
+Frontier java.awt.Point[x=539,y=115] needs help
+Frontier java.awt.Point[x=331,y=285] needs help
+Frontier java.awt.Point[x=631,y=455] needs help
+Frontier java.awt.Point[x=439,y=378] needs help
+Frontier java.awt.Point[x=181,y=396] needs help
+2          3            165          479          96,2          1635,3
+Frontier java.awt.Point[x=158,y=111] needs help
+Frontier java.awt.Point[x=351,y=121] needs help
+Frontier java.awt.Point[x=513,y=106] needs help
+Frontier java.awt.Point[x=568,y=281] needs help
+Frontier java.awt.Point[x=631,y=452] needs help
+Frontier java.awt.Point[x=371,y=373] needs help
+Frontier java.awt.Point[x=180,y=396] needs help
+2          4            225          598          98          2209,5
+Frontier java.awt.Point[x=161,y=110] needs help
+Frontier java.awt.Point[x=353,y=122] needs help
+Frontier java.awt.Point[x=496,y=110] needs help
+Frontier java.awt.Point[x=331,y=285] needs help
+Frontier java.awt.Point[x=506,y=267] needs help
+Frontier java.awt.Point[x=631,y=451] needs help
+Frontier java.awt.Point[x=662,y=327] needs help
