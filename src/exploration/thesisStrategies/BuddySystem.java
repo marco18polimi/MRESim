@@ -5,6 +5,7 @@ import agents.sets.ActiveSet;
 import agents.sets.FollowerSet;
 import agents.sets.IdleSet;
 import agents.sets.LeaderSet;
+import config.Constants;
 import environment.Environment;
 import environment.Frontier;
 import exploration.thesisControllers.BuddyController;
@@ -119,7 +120,7 @@ public class BuddySystem {
             goal = leaderGoalFunction(agent,frontiers,teamPositioning,teamGoals);
         }else if(FollowerSet.getInstance().isFollower(agent)){
             Point splittingGoal = splittingFunction(agent);
-            if(splittingGoal != null){
+            if(splittingGoal != null && agent.getTimeElapsed() > Constants.SPLIT_TIME){
                 goal = splittingGoal;
             }else {
                 goal = followerGoalFunction(agent, frontiers, teamPositioning, teamGoals);
@@ -247,12 +248,8 @@ public class BuddySystem {
 
     // <editor-fold defaultstate="collapsed" desc="PHI: splitting function">
     private static Point splittingFunction(RealAgent agent){
-        /*
-        CHECK FOLLOWER FRONTIERS AND, IF THERE IS ONE, TAKE IT AS NEW GOAL
-        HANDLING SPLITTING PROCEDURES (Changing set,set itself as buddy for both leader and follower)
-         */
         Frontier splitFront = BuddyController.getInstance().getFollowerFrontier(agent);
-        if(splitFront != null){
+        if(splitFront != null && agent.getTimeElapsed() > 50){
             Point goal = ExplorationController.moveAgent(agent,splitFront);
             agent.setCurFrontier(splitFront);
             BuddyController.handleSplit(agent);

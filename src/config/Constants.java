@@ -59,6 +59,10 @@ public class Constants {
     public static final int CLOSE_PARAM = 125;
     // </editor-fold>
 
+    // <editor-fold defaultstate="collapsed" desc="Split time">
+    public static final int SPLIT_TIME = 25;
+    // </editor-fold>
+
     // <editor-fold defaultstate="collapsed" desc="Env error counter max">
     public static final int ENV_ERROR_COUNTER_MAX = 2;
     // </editor-fold>

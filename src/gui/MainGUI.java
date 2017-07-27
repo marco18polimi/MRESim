@@ -396,7 +396,7 @@ public class MainGUI extends javax.swing.JFrame {
         boolean visibility;
         if(args.length == 0){
             visibility = true;
-            envCount = 2;
+            envCount = 1;
         }else{
             visibility = true;
             envCount = Integer.parseInt(args[0]);
