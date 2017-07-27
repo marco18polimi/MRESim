@@ -5,6 +5,7 @@ import agents.sets.ActiveSet;
 import agents.sets.FollowerSet;
 import agents.sets.IdleSet;
 import agents.sets.LeaderSet;
+import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 import config.Constants;
 import environment.Environment;
 import environment.Frontier;
@@ -249,7 +250,7 @@ public class BuddySystem {
     // <editor-fold defaultstate="collapsed" desc="PHI: splitting function">
     private static Point splittingFunction(RealAgent agent){
         Frontier splitFront = BuddyController.getInstance().getFollowerFrontier(agent);
-        if(splitFront != null && agent.getTimeElapsed() > 50){
+        if(splitFront != null && agent.getTimeElapsed() > Constants.SPLIT_TIME){
             Point goal = ExplorationController.moveAgent(agent,splitFront);
             agent.setCurFrontier(splitFront);
             BuddyController.handleSplit(agent);

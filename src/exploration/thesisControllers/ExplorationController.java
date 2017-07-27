@@ -1,12 +1,15 @@
-package exploration;
+package exploration.thesisControllers;
 
-import agents.ActiveSet;
-import agents.IdleSet;
+import agents.sets.ActiveSet;
+import agents.sets.IdleSet;
 import agents.RealAgent;
 import config.Constants;
 import environment.ContourTracer;
 import environment.Environment;
 import environment.Frontier;
+import exploration.RandomWalk;
+import exploration.SimulationFramework;
+import path.Path;
 
 import java.awt.*;
 import java.util.LinkedList;
@@ -16,6 +19,10 @@ import java.util.PriorityQueue;
  * Created by marco on 05/04/2017.
  */
 public class ExplorationController {
+
+    // <editor-fold degaultstate="collapsed" desc="Variables">
+    public static boolean starterSelected = false;
+    // </editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Calculate and set agent's frontiers">
 
@@ -113,7 +120,7 @@ public class ExplorationController {
 
     // <editor-fold defaultstate="collapsed" desc="Set starting agent">
 
-    private static class AgentFrontierPair {
+    public static class AgentFrontierPair {
 
         private RealAgent agent;
         private Frontier frontier;
@@ -167,5 +174,46 @@ public class ExplorationController {
     }
 
     // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="MoveAgent">
+    public static Point moveAgent(RealAgent agent,Frontier f){
+        Point nextStep;
+        Path goal = agent.calculatePath(agent.getLocation(),f.getCentre());
+        agent.setPath(goal);
+
+        // <editor-fold defaultstate="collapsed" desc="Handle path errors">
+        if (agent.getPath() == null
+                || agent.getPath().getPoints() == null
+                || agent.getPath().getPoints().isEmpty()) {
+            SimulationFramework.log("Path problems","errConsole");
+            LinkedList<Point> outline = f.getPolygonOutline();
+            boolean found = false;
+
+            for(Point p : outline){
+                SimulationFramework.log("Out. point: "+p,"errConsole");
+                Path curr = agent.calculatePath(agent.getLocation(),p);
+                agent.setPath(curr);
+                if (!(agent.getPath() == null)
+                        && !(agent.getPath().getPoints() == null)
+                        && !agent.getPath().getPoints().isEmpty()){
+                    found = true;
+                }
+            }
+
+            if(!found) {
+                nextStep = RandomWalk.takeStep(agent);
+                agent.setEnvError(false);
+                return nextStep;
+            }
+
+            SimulationFramework.log("Path problems SOLVED","errConsole");
+        }
+        // </editor-fold>
+
+        agent.getPath().getPoints().remove(0);
+        return agent.getNextPathPoint();
+    }
+    // </editor-fold>
+
 
 }
