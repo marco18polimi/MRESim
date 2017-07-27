@@ -1,21 +1,22 @@
-package exploration.thesis;
+package exploration.thesisStrategies;
 
 import agents.*;
+import agents.sets.ActiveSet;
+import agents.sets.IdleSet;
 import environment.Environment;
 import environment.Frontier;
-import exploration.ExplorationController;
-import exploration.LeaderFollower;
-import exploration.RandomWalk;
 import exploration.SimulationFramework;
-import path.Path;
+import exploration.thesisControllers.ExplorationController;
+import exploration.thesisControllers.ReserveController;
 
 import java.awt.*;
 import java.util.LinkedList;
 
 /**
- * Created by marco on 17/05/2017.
+ * Created by marco on 07/06/2017.
  */
-public class PureExploration {
+@SuppressWarnings("Duplicates")
+public class Reserve {
 
     // <editor-fold defaultstate="collapsed" desc="TakeStep">
     /**
@@ -25,20 +26,16 @@ public class PureExploration {
      * @return nextStep
      */
     public static Point takeStep(RealAgent agent, Environment env){
-
         Point nextStep = agent.getLocation();
 
         // <editor-fold defaultstate="collapsed" desc="Get strategy support sets">
         IdleSet idleSet = IdleSet.getInstance();
         ActiveSet activeSet = ActiveSet.getInstance();
-        LeaderSet leaderSet = LeaderSet.getInstance();
-        FollowerSet followerSet = FollowerSet.getInstance();
         // </editor-fold>
 
         // <editor-fold defaultstate="collapsed" desc="TIME = 0: set strategy support sets">
         if(agent.getTimeElapsed() == 0){
             idleSet.addPoolAgent(agent);
-            leaderSet.addLeader(agent);
         }
         // </editor-fold>
 
@@ -46,9 +43,12 @@ public class PureExploration {
         else if (agent.getTimeElapsed() == 1){
             ExplorationController.setStartingAgent(agent,env);
             if(agent.getStarter()){
+                SimulationFramework.log("["+agent.getName()+"] starting","personalConsole");
                 Point goal = rePlan(agent,env);
+
                 idleSet.removePoolAgent(agent);
                 activeSet.addActiveAgent(agent);
+
                 nextStep = goal;
             }
         }
@@ -57,6 +57,9 @@ public class PureExploration {
         // <editor-fold defaultstate="collapsed" desc="TIME > 1: move remaining agents">
         else if(agent.getTimeElapsed() > 1) {
             if(activeSet.isActive(agent)) {
+                if(agent.getFirstCall()){
+                    agent.setFirstCall(false);
+                }
                 Point goal = rePlan(agent,env);
                 nextStep = goal;
             }else{
@@ -74,7 +77,6 @@ public class PureExploration {
         // </editor-fold>
 
         return nextStep;
-
     }
     // </editor-fold>
 
@@ -95,18 +97,9 @@ public class PureExploration {
         //G set
         LinkedList<Point> teamGoals = ExplorationController.calculateTeamGoals();
 
-        //Call goal function
+        //Call appropriate goal function
         Point goal = null;
-        if(LeaderSet.getInstance().isLeader(agent)){
-            goal = leaderGoalFunction(agent,frontiers,teamPositioning,teamGoals);
-        }else if(FollowerSet.getInstance().isFollower(agent)){
-            Point splittingGoal = splittingFunction(agent);
-            if(splittingGoal != null){
-                goal = splittingGoal;
-            }else {
-                goal = followerGoalFunction(agent, frontiers, teamPositioning, teamGoals);
-            }
-        }
+        goal = leaderGoalFunction(agent,frontiers,teamPositioning,teamGoals);
 
         return goal;
     }
@@ -114,7 +107,32 @@ public class PureExploration {
 
     // <editor-fold defaultstate="collapsed" desc="ALPHA: Activation function">
     private static Point activationFunction(RealAgent agent){
-        return agent.getLocation();
+        agent.getStats().setTimeSinceLastPlan(0);
+        Point activationGoal = null;
+
+        try{
+            ReserveController.getInstance().getSem().acquire();
+            LinkedList<Frontier> freeCall = ReserveController.getInstance().getNotAssignedFrontiers();
+
+            if(!freeCall.isEmpty()){
+                Frontier f = ReserveController.getInstance().chooseBestReservePair(agent,freeCall);
+                if(f!=null){
+                    agent.setFirstCall(true);
+                    ReserveController.getInstance().setAssignedFrontier(f);
+
+                    IdleSet.getInstance().removePoolAgent(agent);
+                    ActiveSet.getInstance().addActiveAgent(agent);
+
+                    activationGoal = ExplorationController.moveAgent(agent,f);
+                }
+            }
+        }catch(InterruptedException e){
+            //Do something
+        }finally{
+            ReserveController.getInstance().getSem().release();
+        }
+
+        return activationGoal;
     }
     // </editor-fold>
 
@@ -155,24 +173,14 @@ public class PureExploration {
             }
         }
 
+        //Call reserve agents
+        frontiers.remove(closer);
+        ReserveController.getInstance().addCallFrontiers(frontiers);
+
         //Move agent
         Point goal = ExplorationController.moveAgent(agent,closer);
         return goal;
 
-    }
-    // </editor-fold>
-
-    // <editor-fold defaultstate="collapsed" desc="GAMMA: goal function for following agents">
-    /**
-     * Calculate goal location for following agents
-     * @param agent
-     * @param frontiers
-     * @param teamPositioning
-     * @param teamGoals
-     * @return followerGoal
-     */
-    private static Point followerGoalFunction(RealAgent agent,LinkedList<Frontier> frontiers,LinkedList<Point> teamPositioning,LinkedList<Point> teamGoals){
-        return agent.getLocation();
     }
     // </editor-fold>
 
@@ -181,11 +189,4 @@ public class PureExploration {
         return agent.getLocation();
     }
     // </editor-fold>
-
-    // <editor-fold defaultstate="collapsed" desc="PHI: splitting function">
-    private static Point splittingFunction(RealAgent agent){
-        return agent.getLocation();
-    }
-    // </editor-fold>
-
 }

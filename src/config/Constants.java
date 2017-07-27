@@ -50,12 +50,21 @@ public class Constants {
     // <editor-fold defaultstate="collapsed" desc="Batch constants">
     public static final int BATCH_RUNS = 1;
 
-    public static final int BATCH_AGENTS = 5;
+    public static final int BATCH_AGENTS = 10;
 
     public static final int BATCH_ENVS = 3;
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Clustering constants">
+    public static final int CLOSE_PARAM = 125;
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="Split time">
+    public static final int SPLIT_TIME = 25;
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="Env error counter max">
+    public static final int ENV_ERROR_COUNTER_MAX = 2;
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Already present constants">
@@ -97,7 +106,7 @@ public class Constants {
     public static final int INIT_DELAY = 500;
     
     // Replan every ... steps
-    public static final int REPLAN_INTERVAL = 15;
+    public static final int REPLAN_INTERVAL = 10;
     
     // Min time between RV replan
     public static final int RV_REPLAN_INTERVAL = REPLAN_INTERVAL;

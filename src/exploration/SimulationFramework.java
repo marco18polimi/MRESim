@@ -42,8 +42,13 @@ package exploration;
 
 import agents.*;
 import agents.BasicAgent.ExploreState;
+import agents.sets.ActiveSet;
+import agents.sets.IdleSet;
 import environment.*;
 import config.*;
+import exploration.thesisControllers.BuddyController;
+import exploration.thesisControllers.ExplorationController;
+import exploration.thesisControllers.ReserveController;
 import gui.*;
 import communication.*;
 import config.RobotConfig.roletype;
@@ -161,6 +166,20 @@ public class SimulationFramework implements ActionListener {
 
         // Initialize Image
         updateImage(true);
+
+        //Clear all strategies structures
+        clearAll();
+    }
+
+    private void clearAll(){
+        if(simConfig.getExpAlgorithm() == exptype.Reserve){
+            ReserveController.getInstance().getCallFrontiers().clear();
+            ExplorationController.starterSelected = false;
+        }else if(simConfig.getExpAlgorithm() == exptype.BuddySystem){
+            BuddyController.getInstance().getCallFrontiers().clear();
+            BuddyController.getInstance().getFollowerFrontiers().clear();
+            ExplorationController.starterSelected = false;
+        }
     }
             
     private void createAgents(RobotTeamConfig robotTeamConfig) {
@@ -188,6 +207,34 @@ public class SimulationFramework implements ActionListener {
             for(int j=0; j<numRobots; j++)
                 if(j != i)
                     agent[i].addTeammate(teammate[j].copy());
+
+        //Strategies starting agents operations
+        switch(simConfig.getExpAlgorithm()) {
+            case Reserve:
+                break;
+            case BuddySystem:
+                createCouples();
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    private void createCouples(){
+        for(int i=1;i<numRobots;i++){
+            if(i%2 == 0) {
+                agent[i].setFollower(true);
+                agent[i].setBuddy(agent[i-1]);
+            }else {
+                agent[i].setLeader(true);
+                if((i+1) < numRobots){
+                    agent[i].setBuddy(agent[i+1]);
+                }else{
+                    agent[i].setBuddy(agent[i]);
+                }
+            }
+        }
     }
     
 // </editor-fold>     
@@ -460,7 +507,8 @@ public class SimulationFramework implements ActionListener {
     public void start() {
         runNumber = 0;
         //Check if we are running batch
-        if (simConfig.getExpAlgorithm() == exptype.BatchRun || simConfig.getExpAlgorithm() == exptype.LeaderFollower) {
+        if (simConfig.getExpAlgorithm() == exptype.PureExploration || simConfig.getExpAlgorithm() == exptype.Reserve
+                || simConfig.getExpAlgorithm() == exptype.BuddySystem) {
             isBatch = true;
         } else isBatch = false;
         
@@ -531,7 +579,7 @@ public class SimulationFramework implements ActionListener {
     }
 
     private void updateRobotsAndRestart(int dim) {
-        if(dim > Constants.BATCH_AGENTS){
+        if(dim > (Constants.BATCH_AGENTS+1)){
             updateEnvironmentAndRestart(this.environmentCounter+1);
             return;
         }
@@ -560,24 +608,25 @@ public class SimulationFramework implements ActionListener {
         BufferedReader br = null;
         FileWriter fw = null;
         FileReader fr = null;
-        String rFilename;
+        String rFolder;
+        String rFilename = String.valueOf(n-1);
         switch(this.environmentCounter){
             case 1:
-                rFilename = "lastRoomsTeamStable";
+                rFolder = "roomsTeam";
                 break;
             case 2:
-                rFilename = "lastMazeTeamStable";
+                rFolder = "mazeTeam";
                 break;
             case 3:
-                rFilename = "lastLairTeamStable";
+                rFolder = "lairTeam";
                 break;
             default:
-                rFilename = "lastRoomsTeamStable";
+                rFolder = "roomsTeam";
                 break;
         }
         String wFilename = "lastteamconfig";
         try {
-            File rFile = new File("C:/Users/marco/Documents/Tesi/MRESim/config/"+rFilename+".txt");
+            File rFile = new File("C:/Users/marco/Documents/Tesi/MRESim/config/"+rFolder+"/"+rFilename+".txt");
             File wFile = new File("C:/Users/marco/Documents/Tesi/MRESim/config/"+wFilename+".txt");
             fr = new FileReader(rFile.getAbsoluteFile());
             fw = new FileWriter(wFile.getAbsoluteFile());

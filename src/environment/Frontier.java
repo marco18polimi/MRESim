@@ -58,8 +58,10 @@ public class Frontier implements Comparable<Frontier>  {
     private Polygon areaPolygon;
     private LinkedList<Point> polygonOutline;
     private double area;
-    
-    
+
+    // Added
+    private boolean assigned;
+
    // This constructor used by new calculatefrontier function
     public Frontier(int agentX, int agentY, LinkedList<Point> po) {
         this.polygonOutline = po;
@@ -67,6 +69,7 @@ public class Frontier implements Comparable<Frontier>  {
         this.area = calculateArea();
         this.centre = newCalculateCentre();
         this.distanceToCentre = centre.distance(agentX, agentY);
+        this.assigned = false;
     }
     
     // This constructor used by copy() function
@@ -76,12 +79,19 @@ public class Frontier implements Comparable<Frontier>  {
         this.area = a;
         this.centre = c;
         this.distanceToCentre = d2c;
+        this.assigned = false;
     }
     
 
 // </editor-fold>     
 
-// <editor-fold defaultstate="collapsed" desc="Key functions copy, compareto">
+// <editor-fold defaultstate="collapsed" desc="Key functions copy, compareto, isClose">
+    public boolean isClose(Frontier other){
+        if(this.centre.distance(other.getCentre()) < Constants.CLOSE_PARAM){
+            return true;
+        }
+        return false;
+    }
 
     public Frontier copy() {
         return new Frontier(polygonOutline, areaPolygon, area, centre, distanceToCentre);
@@ -119,6 +129,9 @@ public class Frontier implements Comparable<Frontier>  {
 // </editor-fold>     
 
 // <editor-fold defaultstate="collapsed" desc="Get and set">
+    public boolean getAssigned(){ return this.assigned; }
+
+    public void setAssigned(boolean as){ this.assigned = as; }
 
     public Polygon getAreaPolygon() {
         return areaPolygon;

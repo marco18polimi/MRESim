@@ -52,12 +52,13 @@ import exploration.rendezvous.MultiPointRendezvousStrategy;
 import static exploration.rendezvous.MultiPointRendezvousStrategy.findNearestPointInBaseCommRange;
 import exploration.rendezvous.RendezvousAgentData;
 import exploration.rendezvous.RendezvousStrategyFactory;
-import exploration.rendezvous.SinglePointRendezvousStrategy;
-import exploration.rendezvous.SinglePointRendezvousStrategySettings;
+
 import java.util.*;
 import java.awt.*;
 
-import exploration.thesis.PureExploration;
+import exploration.thesisStrategies.BuddySystem;
+import exploration.thesisStrategies.PureExploration;
+import exploration.thesisStrategies.Reserve;
 import path.Path;
 
 
@@ -145,6 +146,10 @@ public class RealAgent extends BasicAgent implements Agent {
     //Added for PureExploration
     private LinkedList teamPositioning;
 
+    //Added for generic
+    private Frontier curFrontier;
+    private int envErrorCounter;
+
     public RealAgent(int envWidth, int envHeight, RobotConfig robot, SimulatorConfig simConfig) {
         super(robot.getRobotNumber(), 
               robot.getName(), 
@@ -207,12 +212,22 @@ public class RealAgent extends BasicAgent implements Agent {
         buddy = null;
 
         teamPositioning = new LinkedList<Point>();
+
+        curFrontier = null;
+        envErrorCounter = 0;
     }
   
-// </editor-fold>     
-
+// </editor-fold>
     
 // <editor-fold defaultstate="collapsed" desc="Get and Set">
+
+    public int getEnvErrorCounter() { return envErrorCounter; }
+
+    public void setEnvErrorCounter(int envErrorCounter) { this.envErrorCounter = envErrorCounter; }
+
+    public Frontier getCurFrontier(){ return curFrontier; }
+
+    public void setCurFrontier(Frontier f){ curFrontier = f; }
 
     public LinkedList<Point> getTeamPositioning(){ return this.teamPositioning; }
 
@@ -568,6 +583,12 @@ public class RealAgent extends BasicAgent implements Agent {
                 case PureExploration:
                                              nextStep = PureExploration.takeStep(this,env);
                                              break;
+                case Reserve:
+                                             nextStep = Reserve.takeStep(this,env);
+                                             break;
+                case BuddySystem:
+                                             nextStep = BuddySystem.takeStep(this,env);
+                                             break;
                 default:                     break;
             }
         } else
@@ -584,6 +605,11 @@ public class RealAgent extends BasicAgent implements Agent {
                                                 nextStep = this.getNextPathPoint();
                                              break;
                 case PureExploration:        nextStep = this.getNextPathPoint();
+                                             break;
+                case Reserve:                nextStep = this.getNextPathPoint();
+                                             break;
+                case BuddySystem:
+                                             nextStep = this.getNextPathPoint();
                                              break;
                 default:                     break;
             }

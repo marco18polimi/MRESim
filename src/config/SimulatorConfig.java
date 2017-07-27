@@ -65,7 +65,7 @@ public class SimulatorConfig {
     private commtype commModel;
     private int simRate;
     private Environment env;
-    public static enum exptype {BatchRun, RunFromLog, LeaderFollower, FrontierExploration, RoleBasedExploration, PureExploration}
+    public static enum exptype {BatchRun, RunFromLog, LeaderFollower, FrontierExploration, RoleBasedExploration, PureExploration, Reserve, BuddySystem}
     public static enum frontiertype {RangeConstrained, PeriodicReturn, ReturnWhenComplete, UtilReturn}
     public double TARGET_INFO_RATIO;
     private exptype expAlgorithm;
