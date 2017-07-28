@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1af4ec83-2cb6-438c-a042-35fb095a1534" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants$MapColor.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants$MapColor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" afterPath="$PROJECT_DIR$/out/production/MRESim/config/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisControllers/ExplorationController$AgentFrontierPair.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisControllers/ExplorationController$AgentFrontierPair.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisControllers/ExplorationController.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisControllers/ExplorationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisStrategies/BuddySystem.class" afterPath="$PROJECT_DIR$/out/production/MRESim/exploration/thesisStrategies/BuddySystem.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" afterPath="$PROJECT_DIR$/config/lastSimulatorConfig.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/lastteamconfig.txt" afterPath="$PROJECT_DIR$/config/lastteamconfig.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/errConsole.txt" afterPath="$PROJECT_DIR$/logs/errConsole.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/personalConsole.txt" afterPath="$PROJECT_DIR$/logs/personalConsole.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesisControllers/ExplorationController.java" afterPath="$PROJECT_DIR$/src/exploration/thesisControllers/ExplorationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java" afterPath="$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java" />
     </list>
     <ignored path="MRESim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,26 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BuddySystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exploration/thesisStrategies/BuddySystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="252" column="78" selection-start-line="252" selection-start-column="78" selection-end-line="252" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1427">
-              <caret line="137" column="57" selection-start-line="137" selection-start-column="57" selection-end-line="137" selection-end-column="57" />
+            <state relative-caret-position="227">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="true" />
                 <element signature="n#!!doc;n#SPLIT_TIME#0;n#Constants#0" expanded="true" />
+                <element signature="e#2559#2633#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -777,12 +755,12 @@
       <workItem from="1495560392876" duration="186000" />
       <workItem from="1496738452389" duration="861000" />
       <workItem from="1496827585372" duration="1048000" />
-      <workItem from="1501198057770" duration="932000" />
+      <workItem from="1501198057770" duration="1707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30461000" />
+    <option name="totallyTimeSpent" value="31236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -844,6 +822,7 @@
           <folding>
             <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="true" />
             <element signature="n#!!doc;n#SPLIT_TIME#0;n#Constants#0" expanded="true" />
+            <element signature="e#2559#2633#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -908,6 +887,7 @@
           <folding>
             <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="true" />
             <element signature="n#!!doc;n#SPLIT_TIME#0;n#Constants#0" expanded="true" />
+            <element signature="e#2559#2633#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -950,6 +930,7 @@
           <folding>
             <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="true" />
             <element signature="n#!!doc;n#SPLIT_TIME#0;n#Constants#0" expanded="true" />
+            <element signature="e#2559#2633#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1166,11 +1147,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1427">
-          <caret line="137" column="57" selection-start-line="137" selection-start-column="57" selection-end-line="137" selection-end-column="57" />
+        <state relative-caret-position="227">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc;n#CLOSE_PARAM#0;n#Constants#0" expanded="true" />
             <element signature="n#!!doc;n#SPLIT_TIME#0;n#Constants#0" expanded="true" />
+            <element signature="e#2559#2633#0" expanded="true" />
           </folding>
         </state>
       </provider>
