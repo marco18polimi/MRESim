@@ -93,7 +93,9 @@ public class AgentStepRunnable implements Runnable{
 
             //<editor-fold defaultstate="collapsed" desc="Get next step">
 
-            if(simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("Reserve") || simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("BuddySystem")) {
+            if(simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("Reserve") ||
+                    simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("BuddySystem") ||
+                    simConfig.getExpAlgorithm() == SimulatorConfig.exptype.valueOf("DivideAndConquer")) {
                 // <editor-fold defaultstate="collapsed" desc="Check environment error">
                 if (agent.getEnvError()) {
                     SimulationFramework.log("["+agent.getName()+"] Env error", "errConsole");

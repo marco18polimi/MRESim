@@ -57,6 +57,7 @@ import java.util.*;
 import java.awt.*;
 
 import exploration.thesisStrategies.BuddySystem;
+import exploration.thesisStrategies.DivideAndConquer;
 import exploration.thesisStrategies.PureExploration;
 import exploration.thesisStrategies.Reserve;
 import path.Path;
@@ -589,6 +590,9 @@ public class RealAgent extends BasicAgent implements Agent {
                 case BuddySystem:
                                              nextStep = BuddySystem.takeStep(this,env);
                                              break;
+                case DivideAndConquer:
+                                             nextStep = DivideAndConquer.takeStep(this,env);
+                                             break;
                 default:                     break;
             }
         } else
@@ -609,6 +613,9 @@ public class RealAgent extends BasicAgent implements Agent {
                 case Reserve:                nextStep = this.getNextPathPoint();
                                              break;
                 case BuddySystem:
+                                             nextStep = this.getNextPathPoint();
+                                             break;
+                case DivideAndConquer:
                                              nextStep = this.getNextPathPoint();
                                              break;
                 default:                     break;
